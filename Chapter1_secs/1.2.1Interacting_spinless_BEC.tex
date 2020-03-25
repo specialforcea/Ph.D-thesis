@@ -1,0 +1,64 @@
+\subsection{Interacting spinless BEC}
+An interacting system can be described by second quantization Hamiltonian. In the second quantization framework, particles in a system are described by creation and annihilation operators in the basis of many-body Fock states. Creation operators $\hat{a}_k^\dag$ creates a particle in the Fock state $\ket{n_1,\dots , n_k,\dots}$ while annihilation operators $\hat{a}_k$ annihilates a particle in the Fock state $\ket{n_1,\dots , n_k,\dots}$.  
+\begin{equation}
+\begin{aligned}
+    &\hat{a}_k^\dag\ket{n_1,\dots , n_k,\dots} = \sqrt{n_k+1}\ket{n_1,\dots,n_k+1,\dots}\\
+    &\hat{a}_k\ket{n_1,\dots,n_k,\dots} = \sqrt{n_k}\ket{n_1,\dots,n_k-1,\dots}
+\end{aligned}
+\end{equation}
+With a change of basis, the spatial creation and annihilation operators can be defined as
+\begin{equation}
+    \begin{aligned}
+    &\hat{\psi}(\Vec{r}) = \sum_k \hat{a}_k \braket{\Vec{r}}{\Vec{k}} = \sum_k \hat{a}_k \frac{\exp{i\Vec{p}\cdot\Vec{r}/\hbar}}{\sqrt{V}}\\
+    &\hat{\psi}^\dag(\Vec{r}) = \sum_k \hat{a}^\dag_k \braket{\Vec{r}}{\Vec{k}} = \sum_k \hat{a}_k^\dag \frac{\exp{-i\Vec{p}\cdot\Vec{r}/\hbar}}{\sqrt{V}}.\\
+    \end{aligned}
+\end{equation}
+$\hat{\psi}^\dag(\Vec{r})$ and $\hat{\psi}(\Vec{r})$ creates and annihilates a particle at spatial coordinate $\Vec{r}$. Operator $\hat{N}_k = \hat{a}_k^\dag\hat{a}_k$ counts the number of particles in the momentum state $\ket{k}$. The two-particle operator is defined as 
+\begin{equation}
+    \begin{aligned}
+    \hat{V}_{int} &= \frac{1}{2} \sum_{i\neq j}\hat{N}_i\hat{N}_j V_{ij} + \frac{1}{2}\sum_i \hat{N}_i(\hat{N}_i-1)V_{ii}\\
+    & = \frac{1}{2}\sum_{i, j}(\hat{N}_i\hat{N}_j - \hat{N}_i\delta_{ij})V_{ij}
+    \end{aligned}
+\end{equation}
+where $V_{ij}$ is the interaction between particles in states $\ket{i}$ and $\ket{j}$. From the orthogonality of Fock states and Pauli's exclusion principle, we can derive the commutators of creation and annihilation operators for both Bosons and Fermions.
+For Bosons,
+\begin{equation}
+    \begin{aligned}
+    &[\hat{a}_i, \hat{a}_j^\dag] = \delta_{ij}\\
+    &[\hat{a}_i, \hat{a}_j] = [\hat{a}_i^\dag, \hat{a}_j^\dag] = 0
+    \end{aligned}
+\end{equation}
+where $[A,B] = AB - BA$ is the commutator of operators $A$ and $B$.
+For Fermions,
+\begin{equation}
+    \begin{aligned}
+    &\{\hat{a}_i, \hat{a}_j^\dag\} = \delta_\{ij\}\\
+    &\{\hat{a}_i, \hat{a}_j\} = \{\hat{a}_i^\dag, \hat{a}_j^\dag\} = 0
+    \end{aligned}
+\end{equation}
+where ${A,B} = AB + BA$ is the anti-commutator of operators $A$ and $B$. With the change of basis, we can also obtain the commutation and anti-commutation relations of field operators $\hat{\psi}(\Vec{r})$ and $\hat{\psi}^\dag(\Vec{r})$.
+For Bosons,
+\begin{equation}
+    \begin{aligned}
+    &[\hat{\psi}(\Vec{r}~'), \hat{\psi}^\dag(\Vec{r}~'')] = \delta^3(\Vec{r}~'-\Vec{r}~'')\\
+    &[\hat{\psi}(\Vec{r}~'), \hat{\psi}(\Vec{r}~'')] = [\hat{\psi}^\dag(\Vec{r}~'), \hat{\psi}^\dag(\Vec{r}~'')] = 0.
+    \end{aligned}
+\end{equation}
+For Fermions,
+\begin{equation}
+    \begin{aligned}
+    &\{\hat{\psi}(\Vec{r}~'), \hat{\psi}^\dag(\Vec{r}~'')\} = \delta^3(\Vec{r}~'-\Vec{r}~'')\\
+    &\{\hat{\psi}(\Vec{r}~'), \hat{\psi}(\Vec{r}~'')\} = \{\hat{\psi}^\dag(\Vec{r}~'), \hat{\psi}^\dag(\Vec{r}~'')\} = 0.
+    \end{aligned}
+\end{equation}
+With the commutators, we can rewrite the interaction operator $\hat{V}$,
+\begin{equation}
+    \hat{V}_{int} = \frac{1}{2}\sum_{i,j}\hat{a}_i^\dag\hat{a}_j^\dag V_{ij} \hat{a}_j\hat{a}_i,
+\end{equation}
+which is valid for both Bosons and Fermions.
+
+In general, the Hamiltonian of a system is
+\begin{equation}
+    \hat{H} = \sum_i \frac{\hat{\textbf{p}}_i^2}{2m} + \hat{V}(\hat{\textbf{r}}_i) + \hat{V}_{int}
+\end{equation}
+
