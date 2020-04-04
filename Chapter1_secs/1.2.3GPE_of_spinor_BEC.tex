@@ -1,0 +1,50 @@
+\section{GPE of spinor BEC}
+When we add the spin degree of freedom, we need to consider the spin dependent potential the spin interaction in the two particle scattering process. For two spin-1 particles, their total angular momentum $F$ can be 0 or 2, corresponding to scattering channel 0 and channel 2. Their scattering length is different in the both channels and the s-wave pseudo-potential is  
+\begin{equation}
+    V_{int}^F({\bf r},{\bf r}') = g_F\delta({\bf r},{\bf r}')
+\end{equation}
+where
+\begin{equation}
+    g_F = \frac{4\pi\hbar^2}{M}a_F
+\end{equation}
+and $F \in \{0,2\}$.
+
+In second quantization representation, the interaction of a spin-1 system \cite{kawaguchi2012spinor} is
+\begin{equation}
+    \hat{V}_{int} = \frac{1}{2} \sum_{m_1,m_2,m_1',m_2'}\int d\textbf{r}~ C_{m_1,m_2}^{m_1',m_2'} \hat{\Psi}^\dag_{m_1}(\textbf{r})\hat{\Psi}^\dag_{m_2}(\textbf{r})
+    \hat{\Psi}_{m_1'}(\textbf{r})\hat{\Psi}_{m_2'}(\textbf{r})
+\end{equation}
+where
+\begin{equation}
+    C_{m_1,m_2}^{m_1',m_2'} = \frac{4\pi\hbar^2}{M} \sum_{F=0,2}a_F\matrixel{m_1;m_2}{\hat{P}_F}{m_1';m_2'}.
+\end{equation}
+Here the operator 
+\begin{equation}
+    \hat{P}_F = \sum_{m_F=-F}^F \ketbra{F,m_F}{F,m_F}
+\end{equation}
+projects the two-body angular momentum states onto the total angular momentum basis.
+
+Back to the two-body angular momentum basis, the interaction can be written in the form
+\begin{equation}
+    \hat{V}_{int} = \frac{1}{2} \sum_{m_1,m_2}\int d\textbf{r}~  \hat{\Psi}^\dag_{m_1}(\textbf{r})\hat{\Psi}^\dag_{m_2}(\textbf{r})
+    \hat{\Psi}_{m_1}(\textbf{r})\hat{\Psi}_{m_2}(\textbf{r})(c_0 + c_2\Vec{F}_{m_1}\cdot\Vec{F}_{m_2}).
+\end{equation}
+Here,
+\begin{equation}
+    c_0 = \frac{4\pi\hbar^2}{M}\frac{g_0+2g_2}{3},~ {\it and}~ c_2 = \frac{4\pi\hbar^2}{M}\frac{g_2 - g_0}{3}. 
+\end{equation}
+
+The Hamiltonian of the system is
+\begin{equation}
+    \hat{H} = \sum_{m_1,m_2} \int d\textbf{r}~ \hat{\Psi}^\dag_{m_1}(\textbf{r})\left[-\frac{\hbar^2}{2m}\grad^2 \delta_{m_1,m_2}+ \hat{U}_{m_1,m_2}(\textbf{r})\right]\hat{\Psi}_{m_2}(\textbf{r}) + \hat{V}_{int}.
+\end{equation}
+$\hat{U}_{m_1,m_2}(\textbf{r})$ can be any spin dependent potential. For example, Raman coupling is widely used in a BEC system as one realization of spin-orbit coupling. Intuitively, when a particle in the spin state $\ket{m_F}$ absorbs or emits a photon with certain momentum $k_{\rm R}$, its the angular momentum state also changes by +1 or -1. By the law of momentum conservation, the partcle's momentum also changes by $\pm \kr$. So the state $\ket{k,m_F}$ is coupled with states $\ket{k + \kr,m_F+1}$,$\ket{k - \kr,m_F-1}$. 
+
+From Heisenberg equation and mean field approximation, we can derive the spin-1 GPE
+\begin{align} \label{spinor gpe}
+    i\hbar\partial_t\psi_1 = & -\frac{\hbar^2}{2m}\nabla^2\psi_1  + \sum_{m_F}\hat{U}_{m_F,1}\psi_{m_F} + c_0n\psi_1\nonumber + c_2(n_1 + n_0 -n_{-1})\psi_1 + c_2\psi^\ast_{-1}\psi_0\psi_0\nonumber \\  
+        i\hbar\partial_t\psi_0 = &-\frac{\hbar^2}{2m}\nabla^2\psi_0 + \sum_{m_F}\hat{U}_{m_F,0}\psi_{m_F} + c_0n\psi_0 + c_2(n_1 + n_{-1})\psi_0 +2c_2\psi^\ast_{0}\psi_1\psi_{-1}\nonumber\\
+    i\hbar\partial_t\psi_{-1} = &-\frac{\hbar^2}{2m}\nabla^2\psi_{-1} + \sum_{m_F}\hat{U}_{m_F,-1}\psi_{m_F} + c_0n\psi_{-1}\nonumber +c_2(n_{-1} + n_0 -n_1)\psi_{-1} + c_2\psi^\ast_1\psi_0\psi_0\nonumber
+\end{align}
+
+

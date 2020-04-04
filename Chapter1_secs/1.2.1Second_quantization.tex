@@ -1,4 +1,4 @@
-\subsection{Interacting spinless BEC}
+\subsection{Second quantization}
 An interacting system can be described by second quantization Hamiltonian. In the second quantization framework, particles in a system are described by creation and annihilation operators in the basis of many-body Fock states. Creation operators $\hat{a}_k^\dag$ creates a particle in the Fock state $\ket{n_1,\dots , n_k,\dots}$ while annihilation operators $\hat{a}_k$ annihilates a particle in the Fock state $\ket{n_1,\dots , n_k,\dots}$.  
 \begin{equation}
 \begin{aligned}
@@ -59,6 +59,12 @@ which is valid for both Bosons and Fermions.
 
 In general, the Hamiltonian of a system is
 \begin{equation}
-    \hat{H} = \sum_i \frac{\hat{\textbf{p}}_i^2}{2m} + \hat{V}(\hat{\textbf{r}}_i) + \hat{V}_{int}
+    \hat{H} = \sum_i \frac{\hat{\textbf{p}}_i^2}{2m} + \hat{V}(\hat{\textbf{r}}_i) + \hat{V}_{int}，
 \end{equation}
+in the representation of field operators, it takes the form
+\begin{align}
+    \hat{H} = &\int d\textbf{r} \hat{\Psi}^\dag(\textbf{r})\Bigg[-\frac{\hbar^2}{2m}\grad^2 + \hat{V}(\textbf{r})\bigg]\hat{\Psi}(\textbf{r})\\
+    & + \int d\textbf{r}'d\textbf{r}''d\textbf{r}'''d\textbf{r}''''\hat{\Psi}^\dag(\textbf{r}')\hat{\Psi}^\dag(\textbf{r}'')\matrixel{\textbf{r}'\textbf{r}''}{\hat{V}_{int}}{\textbf{r}'''\textbf{r}''''}\hat{\Psi}(\textbf{r}''')\hat{\Psi}(\textbf{r}'''')
+\end{align}
+
 
