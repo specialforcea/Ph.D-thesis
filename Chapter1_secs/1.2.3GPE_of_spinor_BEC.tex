@@ -1,5 +1,10 @@
-\section{GPE of spinor BEC}
-When we add the spin degree of freedom, we need to consider the spin dependent potential the spin interaction in the two particle scattering process. For two spin-1 particles, their total angular momentum $F$ can be 0 or 2, corresponding to scattering channel 0 and channel 2. Their scattering length is different in the both channels and the s-wave pseudo-potential is  
+\subsection{GPE of spinor BEC}
+When we add the spin degree of freedom, we need to consider the spin dependent potential the spin-spin interaction in the two particle scattering process. The two-body interaction takes the form
+\begin{equation}
+    \hat{V}_{int}(\textbf{r}_1,\textbf{r}_2) = (c_0 + c_2\Vec{F}_1\cdot\Vec{F}_2)\delta(\textbf{r}_1-\textbf{r}_2)
+\end{equation}
+The total angular momentum is conserved in the process of two spinor collision and for two spin-1 particles, their total angular momentum $F$ can be 0 or 2, corresponding to scattering channel 0 and channel 2. The sign of coefficient $c_2$ determines whether the system is ferromagnetic (FM) or anti-ferromagnetic (AFM).  
+The s-wave pseudo-potential for both channels is  
 \begin{equation}
     V_{int}^F({\bf r},{\bf r}') = g_F\delta({\bf r},{\bf r}')
 \end{equation}
@@ -7,7 +12,7 @@ where
 \begin{equation}
     g_F = \frac{4\pi\hbar^2}{M}a_F
 \end{equation}
-and $F \in \{0,2\}$.
+and $F \in \{0,2\}$ $a_F$ is the scattering length. To calculate the coefficients $c_0$ and $c_2$, we need to project the two spin states to the total spin states.
 
 In second quantization representation, the interaction of a spin-1 system \cite{kawaguchi2012spinor} is
 \begin{equation}

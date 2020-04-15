@@ -1,0 +1,42 @@
+\subsection{Optical force}
+An atomic system interacts with optical fields, which leads to stimulated emission and Rabi  oscillation when the frequency of the field is near resonance. When the field is far-detuned, the atoms see a spin independent spatial potential, the force of  which drives the atoms' center-of-mass motion. Also, the atoms interacts with vacuum modes that leads to spontaneous emission. The emitted photons have momentum, so the atoms acquire the recoil momentum when the spontaneous emission happens. In the classical physics point of view, the atoms should experience a "force" in the optical fields and the definition of the "force" can be borrowed from classical physics.
+\begin{equation}
+    \hat{F} = \frac{d}{dt}\hat{p} = \frac{1}{ih}[\hat{p},\hat{H}]
+\end{equation}
+The same as classical physics, the force operator is defined as the rate of momentum change and it can be calculated for a two level atomic system with Hamiltonian
+\begin{equation}
+    \hat{H} = \hbar\delta \dyad{2}{2} + \hbar(\Omega(\Vec{r}) \dyad{1}{2} + \Omega^*(\Vec{r}) \dyad{2}{1}).
+\end{equation}
+$\Omega(\Vec{r})$ is a function of $\Vec{r}$ for the inhomogeneous field amplitude. 
+\begin{equation}
+    \Vec{F} = -[\nabla,\Vec{H}(\Vec{r})] = \hbar\nabla\Omega(\Vec{r})\dyad{2}{1} + \hbar\nabla\Omega^*(\Vec{r})\dyad{1}{2}
+\end{equation}
+The state of the system is represented by density operator $\hat{\rho}$ and the expectation value of operator $\hat{F}$ is
+\begin{align}
+    \expval{\hat{F}} &= {\rm Tr}[\hat{\rho}\hat{F}]\\ \nonumber
+    &=\hbar\nabla\Omega\rho_{12} + \hbar\nabla\Omega^*\rho_{21}\\\nonumber
+    &=2\hbar|\Omega|^2\nabla\phi{\rm Im}\left( \frac{\rho_{21}}{\Omega}\right) + \hbar\nabla|\Omega|^2{\rm Re}\left( \frac{\rho_{21}}{\Omega}\right)\\\nonumber
+\end{align}
+Here, $\phi$ is the phase of the field,
+\begin{equation}
+    \Omega = |\Omega|e^{i\phi}.
+\end{equation}
+The first term is interpreted as the dissipative force and the second term the reactive force. This can be more intuitively understood when we look at the form of the force in two extreme cases.
+
+For the steady solution of optical Bloch equation,
+\begin{align}
+    &\rho_{21} = \frac{i\Omega(\rho_{22}-\rho_{11})}{\gamma_{21} - i\delta}\\\nonumber
+    &\rho_{22} = \frac{R}{\gamma(\overline{n} + 1) + 2R}\\\nonumber
+    &R = \frac{2\gamma_{21}|\Omega|^2}{\gamma_{21}^2 + \delta^2}\\\nonumber
+\end{align}
+here, $\gamma_{21}$ is the decay rate of coherence and $R$ is optical pumping rate, 
+    
+
+When the field is weak,
+\begin{equation}
+    |\Omega| \ll \gamma
+\end{equation}
+the coherence $\rho_{21}$ can be approximated with
+\begin{equation}
+    a
+\end{equation}
