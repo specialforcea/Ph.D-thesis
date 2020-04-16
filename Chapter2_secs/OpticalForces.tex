@@ -29,14 +29,41 @@ For the steady solution of optical Bloch equation,
     &\rho_{22} = \frac{R}{\gamma(\overline{n} + 1) + 2R}\\\nonumber
     &R = \frac{2\gamma_{21}|\Omega|^2}{\gamma_{21}^2 + \delta^2}\\\nonumber
 \end{align}
-here, $\gamma_{21}$ is the decay rate of coherence and $R$ is optical pumping rate, 
-    
-
-When the field is weak,
+here, $\gamma_{21}$ is the decay rate of coherence and $R$ is optical pumping rate, the rate the atoms are pumped from the ground state to the excited state. When the field is weak,
 \begin{equation}
     |\Omega| \ll \gamma
 \end{equation}
-the coherence $\rho_{21}$ can be approximated with
+the time atoms spend in the excited state is close to zero, $\rho_{22} \approx 0$. The coherence $\rho_{21}$ can be approximated with
 \begin{equation}
-    a
+    \rho_{21} = \Omega\frac{\delta - i\gamma_{21}}{\gamma_{21}^2 + \delta^2}
 \end{equation}
+The dissipative force takes the form
+\begin{align}
+    F_{dis} &= 2\hbar|\Omega|^2 \Vec{k}\frac{\gamma_{21}}{\gamma_{21}^2 + \delta^2}\\\nonumber
+    &= \hbar\Vec{k}R\\
+\end{align}
+Intuitively, it means every time the atom is pumped from the ground state to the excited state, it acquires momentum $\hbar\Vec{k}$. When spontaneous emission happens, the photon is emitted in any direction with equal probability, on the average, the atom does not acquire momentum in spontaneous emission. 
+
+In the other case, when $\delta$ is large, 
+\begin{equation}
+    \delta \gg |\Omega|, \delta \gg \gamma_{21}    
+\end{equation}
+Optical pumping rate $R \approx 0$ and the population in the excited state $\rho_{22} \approx 0$. 
+\begin{equation}
+    {\rm Im}\left[\frac{\rho_{21}}{\Omega}\right] \approx \frac{1}{\delta}
+\end{equation}
+and the reactive force takes the form
+\begin{equation}
+    F_{react} = \frac{\hbar\nabla|\Omega|^2}{\delta}.
+\end{equation}
+Effectively, the atoms see a potential
+\begin{equation}
+    V(\Vec{r}) = -\frac{\hbar|\Omega\Vec{r}|^2}{\delta}
+\end{equation}
+The potential is spin independent, its strength is propotional to the intensity of the field $|\Omega\Vec{r}|^2$ and the sign of $\delta$ determines if the potential is repulsive or attractive. When $\delta > 0$, the field is red detuned, and the potential is lower for stronger intensity, so the potential is attractive. When the field is blue detuned, it is repulsive.  
+
+This potential is known as the dipole potential, it originates from the AC stark shift. Due to the large detuning, it does not drive transition of internal states but changes the energy of the ground state so it is effectively a spin independent potential. Dipole potential is widely used in atomic physics experiments, when $\delta$ is large, it is valid for strong field. So it can be used to make attractive trap, called dipole trap, to trap atoms, do evaporative cooling and make optical lattice. 
+Repulsive potential is also very useful, it cal be used to make 1d trap when the laser is in Laguerre-Gaussian mode \cite{salces2018equations} and make random repulsive potential (optical speckle) which is discussed in detail in Chpt.().
+
+    
+
