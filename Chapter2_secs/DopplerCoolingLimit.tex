@@ -1,0 +1,38 @@
+\subsection{Doppler Cooling Limit}
+The viscous force from a pair of counter-propagating light beams has a negative feed back effect on the velocity of atoms
+\begin{equation}\label{viscous force}
+    F_{tot} = \frac{8\hbar|\Omega|^2\gamma_{21}\delta k^2 v}{(\gamma_{21}^2 + \delta^2)^2}.
+\end{equation}
+It cools down the temperature of the atoms low enough that spontaneous emission effect becomes significant. When spontaneous emission happens, the photon is emitted in any direction equally likely and the recoil effect heats the atoms up. When cooling and spontaneous emission are balanced, the system reaches equilibrium and the temperature of the system is the lower bound of Doppler cooling.
+
+The spontaneous emission can be treated as random kicks the atoms which are in a viscous force, this system resembles the classical Brownian motion which are studied in the early 1900s.  William Sutherland in 1904 \cite{sutherland1905lxxv}, Albert Einstein in 1905 \cite{einstein1905molekularkinetischen},and Marian Smoluchowski in 1906\cite{von1906kinetischen} stuided Browian motion and relation between equilibrium temperature, friction coefficient and diffusion constant. The relation is named the Einstein relation (also known as Wright-Sullivan relation)
+\begin{equation}
+    D = m\eta k_B T
+\end{equation}
+Here $\eta$ is the friction coefficient in the Langevin equation
+\begin{equation}
+    \frac{d}{dt}p = -\eta p + f(t)
+\end{equation}
+and $D$ is the diffusion constant that characterizes the random force $f(t)$,
+\begin{equation}
+    \expval{(f(t)-\expval{f(t)}(f(t')-\expval{f(t')})} = 2D\delta(t-t').
+\end{equation}
+The delta function is an approximation of the auto correlation function of $f(t)$ when the random collision is fast and memoryless. 
+
+The Quantum version of Langevin equation is Heisenberg-Langevin equation, for the two level system, it can be derived that
+\begin{equation}
+    D = 4(\hbar k)^2\frac{|\Omega|^2\gamma/2}{(\gamma/2)^2 + \delta^2},
+\end{equation}
+and it can be calculated from the viscous force Eq.~(\ref{viscous force}),
+\begin{equation}
+    \eta = \frac{8\hbar|\Omega|^2\gamma_{21}\delta k^2}{m(\gamma_{21}^2 + \delta^2)^2}.
+\end{equation}
+When coherence  decay at the rate of spontaneous emission, $\gamma_{21} = \gamma/2$, the equilibrium temperature is
+\begin{equation}
+    k_BT = \frac{\hbar(\delta^2 + (\gamma/2)^2)}{2\delta}.
+\end{equation}
+The lower bound is
+\begin{equation}
+    k_BT = \hbar\frac{\gamma}{2}
+\end{equation}
+when $\delta = \gamma/2$. This was believed to be the limit of Doppler cooling, it is equal to $125~ {\rm µK}$ for ${\rm Cs}$, $140~ {\rm µK}$ for ${\rm Rb}$ and $240~{\rm µK}$ for ${\rm Na}$.
