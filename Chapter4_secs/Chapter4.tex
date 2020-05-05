@@ -1,0 +1,26 @@
+\renewcommand{\thechapter}{4}
+
+\chapter{Optical speckle, a Gaussian beam model}
+Optical  speckle  is  a  powerful  tool  for  creating  disordered potentials for atomic systems\cite{billy2008direct,kondov2011three}.  It was studied in the 1970s \cite{goodman2007speckle}, the strength of the resultant potential is under direct experimental control: the spatial correlation length is tunable and the correlation function is well known. 
+
+Optical speckle can be understood as the self-interfering wave field of a laser after acquiring random phase by reflection off rough surfaces or transmission through disordered media, called a diffuser~\cite{goodman2007speckle}. We will focus on the transmission case and assume that the spatial scale of the disorder $\sigma$ is small in comparison to the laser beam size and that the diffuser transmits light uniformly. The transmitted field can be intuitively thought of as of many waves scattered from microscopic elements comprising the diffuser.  So randomness arises.  As a disordered field, optical speckle is characterized by its intensity distribution, spatial intensity correlation function and power spectral density (PSD).  
+
+As shown in Fig.~\ref{fig:speckle1} shows, ray optics in the paraxial limit provides a simple and useful approach to estimating the on-axis beam properties of a speckle beam a distance $z$ beyond a diffuser.  As a collimated laser beam of wavelength $\lambda$ travels through a diffuser of diameter $D_d$, it acquires a local divergence angle $\theta_d\simeq \lambda / (2 \sigma)$.   
+
+Figure~\ref{fig:speckle1}a depicts the most simple case consisting of an isolated diffuser, for which there are two qualitatively different regimes: A near-field regime with $z < D_d / (2 \theta_d)$, where the typical length scale of optical speckle is $\sigma$, and a far-field regime where the NA of the diffuser increases the speckle scale to $(\lambda / 2)\times(D_d / 2 z)$.  This simple approach is insufficient because we will be interested in micrometer scale speckle, which is far smaller than the 10 to 100 micrometer scale of $\sigma$ for commercial  diffusers.
+
+In Fig.~\ref{fig:speckle1}b we add a lens with diameter $D_L$ and focal length $f$  just after the diffuser.  In the focal plane of the lens, the speckle scale is set by the lens NA, giving a speckle length scale $\lambda f / D_L$, independent of $\sigma$. In contrast, the beam width at the focal plane $w(f) \simeq 2 f \theta_d$ is set by the speckle scale $\sigma$ and not the lens diameter.
+
+In this chapter, we will derive the origin of these design guidelines from  the paraxial wave equation.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Chapter4_secs/speckle1.pdf}
+    \caption{Optical speckle schematic. (a) A collimated beam is transmitted through a rough medium and its intensity is measured in plane $z$. (b) The diverged beam after the rough medium is imaged by a lens at plane $z=z_L$ and $f$ is the focal point of the lens. (c) Field-field correlation length for a Gaussian speckle beam initially with $\sigma=100\ \mu{\rm m}$ and $w=25\ {\rm mm}$ as a function of propagation distance. The red curves plot $c_E(z)$ computed with (solid) and without (dashed) a lens with focal length $f=100\ {\rm mm}$ at $z_L=25\ {\rm mm}$. }
+    \label{fig:speckle1}
+\end{figure}
+
+\input{Chapter4_secs/GB}
+\input{Chapter4_secs/Cor}
+\input{Chapter4_secs/Aperture}
+\input{Chapter4_secs/Distribution}
+\input{Chapter4_secs/simulation}

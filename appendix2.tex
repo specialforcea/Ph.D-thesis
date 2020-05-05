@@ -1,0 +1,37 @@
+\appendix
+\renewcommand{\thechapter}{B}
+\chapter{Calculation results of field-field correlation function}
+\label{appendix:CF}
+
+For field-field correlation function
+\begin{align}
+\frac{C_E({\bf r}_1,{\bf r}_2;z)}{E_0^2} =& \left[\frac{w}{w(z)}\right]^2 \exp(-ik_0\frac{{\bf r}_1^2 - {\bf r}_2^2}{2 R(z)})\label{eq:C_E}\\
+&\times \exp(-\frac{{\bf r}_1^2 + {\bf r}_2^2}{w(z)^2})\exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma(z)^2}) \nonumber 
+\end{align}
+
+In the free propagation case, the original calculation results are
+In case one
+\begin{equation}
+    \begin{cases}
+    %&{\bf \bar{r}}=({\bf r_1}+{\bf r_2})/2\\
+    &1/R(z) = 1/z - k_0^2w^2/8Az^3\\
+    &1/\sigma^2(z)=k_0^2w^2/8z^2 - k_0^4w^4/64Az^4 - k_0^2/16Az^2\\
+    &1/w^2(z) = k_0^2/8Az^2\\
+    &A = 1/2w^2 + 1/\sigma^2 + k_0^2w^2/8z^2
+    \end{cases}
+\end{equation}
+
+With a lens, 
+\begin{align}
+\frac{C_E({\bf r}_1,{\bf r}_2;z)}{E_0^2} =& \frac{k_0^2w^2}{4z^2D} \exp\left[-i\left(\frac{k_0}{2z} + \frac{z_L^2AB}{2Dz^2}\right)({\bf r}_1^2 - {\bf r}_2^2)\right]\label{eq:C_E}\\
+&\times \exp\left[-\frac{k_0^2({\bf r}_1^2 + {\bf r}_2^2)}{4z^2D}\right]\exp\left[-\left( \frac{z_L^2A}{2z^2} -\frac{z_L^4A^2B^2}{2k_0^2z^2D} - \frac{k_0^2}{8z^2D}\right)|{\bf r}_1-{\bf r}_2|^2\right] \nonumber 
+\end{align}
+where,
+\begin{equation}
+    \begin{cases}
+    &A = 1/2w^2 + 1/\sigma^2 + k_0^2w^2/8z_L^2\\
+    &B = \frac{k_0^3w^2}{8z_L^3A} - k_0(1/z+1/z_L-1/f)\\
+    &C = \frac{k_0^2w^2}{8z_L^2} - \frac{k_0^4w^4}{64z_L^4A}\\
+    &D = \frac{z_L^2AB^2}{k_0^2} + C\\
+    \end{cases}
+\end{equation}

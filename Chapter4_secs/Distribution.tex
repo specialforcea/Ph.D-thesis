@@ -1,0 +1,18 @@
+\section{Field and intensity probability distribution}
+In the previous sections, we focused on the average properties speckle fields.  Here we extend this discussion to predict the probability distribution of electric field strength $P(E)$ and intensity $P(I)$.  Our approach focuses first on $P(E)$, and consists of two steps: (1) we find the regime when the central limit theorem applies, thereby assuring a Gaussian probability distribution; (2) we identify $\langle E \rangle$ and $\langle E^2 \rangle$ as the lowest moments of the distribution, fully defining the Gaussian distribution.
+
+We now interpret the electric field
+\begin{align*}
+    E({\bf r}; z) &= \frac{-i k_0}{2\pi z}\int d^2{\bf r'} E^-({\bf r}')e^{-i \phi({\bf r'}) } e^{-k_0|{\bf r}-{\bf r'}|^2/2z},
+\end{align*} 
+of Eq.~\eqref{para field} as a random variable constructed from a sum over incoherent complex phasors.  The cross correlation function (CCF) $\langle E({\bf r}_1; z) E({\bf r}_2; 0)\rangle$ specifies the range over which the initial random field contributes to the final field.  The closed form expression for this CCF is similar to the field-field correlation function in Eq.~\eqref{eq:C_E}; the length scale for the decay of correlations $\sigma_{\rm CCF}(z)$ again obeys  Eq.~\eqref{eq:rayleigh}, but with $M_{\rm CCF}^2=(1 + w^2/\sigma^2 )^2$.  When $w\gg\sigma$, i.e., the initial waist is much larger than the speckle size,  the resulting Rayleigh range reduces to $z_{\rm R, CCF} = k_0 \sigma^2/2$: as if each random source was an individual Gaussian beam with extent $\sigma$.  The criterion that a field $E({\bf r}; z)$ have contributions from many incoherence sources is therefore $\sigma_{\rm CCF}(z)/\sigma\gg1$, i.e., $z\gg z_{\rm R, CCF}$.  
+
+This identifies the central limit theorem's regime of applicability, and we now consider $E({\bf r}; z)$ as a complex valued Gaussian random variable.  The probability distribution for electric field is therefore a function of two independent degrees of freedom, here we select the quadrature variables $E$ and $E^*$, giving $P(E, E^*)$.   Most moments of this quantity are easy to identify using Eqs.~\eqref{para field}, \eqref{eq:zeromean}, \eqref{gaussian C_E} and \eqref{eq:sum_CE_zero}: $\langle E \rangle = \langle E^2 \rangle = 0$, and similarly for $E^*$.   Then Eqs.~\eqref{C_E} and the following discussion assure us that  $\langle E E^* \rangle = \langle |E|^2 \rangle$ takes on a non-zero value.  Together these fully define the Gaussian probability distribution for electric fields
+\begin{align}
+    P(E, E^*) &= \frac{1}{\pi \langle |E|^2 \rangle} \exp\left(-\frac{|E|^2}{\langle |E|^2 \rangle}\right)\label{eq:dist_fields},
+\end{align}
+and using Eq.~\eqref{eq:intensity}, the intensity distribution
+\begin{align}
+    P(I) &= \frac{1}{\langle I \rangle} \exp\left(-\frac{I}{\langle I \rangle}\right) \label{P of int}
+\end{align}
+follows directly.  Thi intensity of a speckle field obeys a exponential distribution and the mean of speckle intensity $\langle I \rangle$ should be equal to its standard deviation $\sqrt{\langle I^2 \rangle}$.

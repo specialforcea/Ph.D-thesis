@@ -1,0 +1,83 @@
+\section{Gaussian beam equations with speckle}
+We focus on monochromatic optical electric fields $E({\bf x}, t)$ with angular frequency $\omega$ traveling predominantly along ${\bf e}_z$.  Such waves can be decomposed as $E({\bf x}, t) = E_\perp({\bf r}; z) \exp[i(k_0 z -\omega t)]$, where $E_\perp({\bf r}; z)$ describes the transverse structure of the electric field with the high spatial frequencies associated with the nominal propagation along ${\bf e}_z$ factored out.  For spatial scales in excess of the optical wavelength the transverse field obeys the paraxial wave equation
+\begin{equation}\label{para equation}
+    -2i k_0 \partial_z E_\perp({\bf r}; z) = \left[-\nabla_\perp^2 + k_0^2 \chi({\bf r}; z)\right] E_\perp({\bf r}; z)
+\end{equation}
+traveling in a material with relative susceptibility $\chi({\bf r}; z)$.  We will suppress the $\perp$ subscript in the remainder of our discussion.
+
+Upon traversing through a thin but disordered material with susceptibility $\chi({\bf r}) $ and thickness $\delta z$, an initially Gaussian wave field $E^-({\bf r}, 0) = E_0\exp{-{\bf r}^2/w^2}$ acquires a position dependent complex phase $\phi({\bf r}) = \chi({\bf r}) k_0 \delta z/2$.  The resultant field
+\begin{equation}
+    E^+({\bf r}, 0) = E^-({\bf r}, 0)\exp[- i \phi({\bf r})]
+\end{equation}
+carries the imprint of the disordered medium. The field a distance $z$ beyond the speckle plate follows from
+\begin{align}\label{para field}
+    E({\bf r}; z) &= \frac{-i k_0}{2\pi z}\int d^2{\bf r'} E^+({\bf r'}; 0) e^{-i k_0|{\bf r}-{\bf r'}|^2/2z},
+\end{align} 
+the formal solution to the paraxial wave equation Eq.~(\ref{para equation}).  We model typical diffusion plates, for which: (1) the correlation function of the susceptibility $\langle \chi({\bf r_1})\chi({\bf r_2}) \rangle$ depends only on relative distance $|{\bf r_1}-{\bf r_2}|$, where $\langle ... \rangle$ denotes the ensemble average over disorder realizations. (2) the variation of the imprinted phase $\phi({\bf r})$ is much larger than $2\pi$ with
+\begin{align}\label{eq:zeromean}
+\langle \exp\left[- i \phi({\bf r}_1)\right]\rangle &= 0,
+\end{align} 
+i.e., $\phi({\bf r})$ is uniformly distributed over the interval $[-\pi,\pi]$.
+ 
+We turn to the field-field correlation function
+\begin{equation}\label{C_E}
+\begin{aligned}
+    C_E({\bf r}_1,{\bf r}_2;z) &=\langle E({\bf r}_1; z)E^\ast({\bf r}_2; z)\rangle\! -\! \langle E({\bf r}_1; z)\rangle\langle E^\ast({\bf r}_2; z)\rangle
+\end{aligned}
+\end{equation}
+to characterize the statistical properties of the disordered electric field.  Equation~\eqref{eq:zeromean} implies that the second term is zero.  At $z=0$, the uniform phase distribution implies $\langle E^+({\bf r}; 0) \rangle = 0$, giving
+\begin{align*}
+\frac{C_E({\bf r}_1,{\bf r}_2;0)}{E_0^2 } &= \exp\left(-\frac{{\bf r}_1^2 + {\bf r}_2^2}{w^2}\right) \langle \exp\left\{- i \left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\right\}\rangle.
+\end{align*}
+Under the assumptions of the typical diffusion plates, we model the phase-phase correlation function 
+\begin{align}\label{gaussian C_E}
+\langle \exp\left\{- i \left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\right\}\rangle &= \exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma^2}), 
+\end{align} 
+with a Gaussian decay of width $\sigma$ that is amenable to the following analytic treatments.  The relation
+\begin{align}\label{eq:sum_CE_zero}
+\langle \exp\left\{- i \left[\phi({\bf r}_1)+\phi({\bf r}_2)\right]\right\}\rangle &= 0, 
+\end{align} 
+that follows from Eq.~\eqref{eq:zeromean}, in conjunction with the assumption that the correlation function depends only on relative distance, will be useful as well.
+
+We first consider the case illustrated by Fig.~\ref{fig:speckle1}(a) where a Gaussian beam goes through a large disordered medium. The field-field correlation function at all positions following the disordered medium  can be exactly computed and takes the form 
+\begin{align}
+\frac{C_E({\bf r}_1,{\bf r}_2;z)}{E_0^2} =& \left[\frac{w}{w(z)}\right]^2 \exp(-ik_0\frac{{\bf r}_1^2 - {\bf r}_2^2}{2 R(z)})\label{eq:C_E}\\
+&\times \exp(-\frac{{\bf r}_1^2 + {\bf r}_2^2}{w(z)^2})\exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma(z)^2}) \nonumber 
+\end{align}
+reminiscent of that of Gaussian beams.
+
+This correlation function is characterized in terms of three $z$-dependent functions: the beam waist $w(z)$, the radius of curvature $R(z)$, and the correlation length $\sigma(z)$.  Each of these is simply related to a reduced Rayleigh range $z_{\rm R}^* = z_{\rm R}/M$, with conventional Rayleigh range $z_{\rm R} = k_0 w^2/2$ and beam quality factor $M^2 = 1+2w^2/\sigma^2$.  The resulting coefficients
+\begin{align}
+    \left[\frac{w(z)}{w}\right]^2 &= \left[\frac{\sigma(z)}{\sigma}\right]^2 = 1+\left(\frac{z-z_0}{z_{\rm R}^*}\right)^2\label{eq:rayleigh}
+\end{align}
+and
+\begin{align}
+    \frac{R(z)}{z-z_0} = 1 +\left(\frac{z_{\rm R}^*}{z-z_0}\right)^2
+\end{align}
+take the same form as a usual Gaussian beams focused at $z_0$.  Lastly, as in Fig.~\ref{fig:speckle1}(b), an ideal lens with focal length $f$ at position $z_L$ gives new Gaussian beam parameters defined by
+\begin{align}\label{lens making}
+\frac{w^\prime}{w} &= \frac{\sigma^\prime}{\sigma} = f \left[\left(z_0'-z_L-f\right)^2+z_{\rm R}^{*2}\right]^{-1/2}
+\end{align}
+and
+\begin{align*}
+\left(z_0^\prime-z_L\right)^{-1} &=  f^{-1} - \left[\left(z_L-z_0\right) + \frac{z_{\rm R}^{*2}}{z_L-z_0-f} \right]^{-1}
+\end{align*}
+
+where the first expression defines the magnification and the second is analogous to the usual lens makers equation~\cite{Self1983}.  While this leaves $M^2$ unchanged, the Rayleigh range is altered owing to the change in $w$.  All together these relations fully define field-field correlation function $C_E$ throughout an ideal imaging system. 
+
+In most quantum-gas experiments, optical potentials are created using laser light in the far detuned limit, thereby experiencing a potential proportional to the optical intensity
+\begin{equation}\label{intensity}
+    I({\bf r}; z) = \frac{c \epsilon_0}{2} \left|E({\bf r}; z)\right|^2
+\end{equation}
+not the electric field directly.  The ensemble-averaged intensity 
+\begin{align}
+\langle I({\bf r}; z) \rangle &= \frac{c \epsilon_0}{2} C_E({\bf r},{\bf r}; z), \label{eq:intensity}
+\end{align}
+simply related to the field-field correlation function in Eq.~(\ref{eq:C_E}), contains no information about the optical speckle excepting for the changed $M^2$.
+
+As discussed in the next section, the power spectral density (PSD) of the intensity
+\begin{align}
+    \rho({\bf k}; z) &= \langle \tilde{I}({\bf k};z)\tilde{I}^*({\bf k};z)\rangle\nonumber \\
+    &=  \frac{\pi^2w^2(z)}{4M^2}\exp{-\frac{{\bf k}^2w^2(z)}{4M^2}},\label{psd}
+\end{align}
+computed using Eq.~\eqref{eq:C_E}, describes the momentum-change imparted by the speckle potential to a moving atomic wavepacket.

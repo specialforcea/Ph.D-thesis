@@ -1,0 +1,20 @@
+\section{Impact of apertures}
+In the case of focusing optical speckle as shown in Fig.~\ref{fig:speckle1}(b), a lens of focal length $f$ and diameter $D_L \ll w$ is placed at $z=z_L \leq k_0\sigma^2$. The field in the plane $z=z_L$ before the lens, $E^-({\bf r};z_L)$ is essentially unchanged from field $E^+({\bf r};0)$. The field $E^-({\bf r};z_L)$ passes through the lens aperture, where it acquires a position dependent phase and is truncated outside the lens. The emerging field $E^+({\bf r};z_L)$ propagates to the focal plane $z=f+z_L$ where it is 
+\begin{equation}\label{field in z}
+    E_f({\bf r}) = \frac{-i k_0}{2\pi f}e^{-i k_0{\bf r}^2/2f}\int \displaylimits_{|{\bf r'}|<\frac{D_L}{2}} d^2{\bf r'} E^+({\bf r'}; 0) e^{i k_0{\bf r}\cdot{\bf r'}/f}.
+\end{equation}
+When $\sigma \ll D_L \ll w$, the field-field correlation function at the focal plane is
+\begin{align}
+C_{E,f}({\bf r}_1,{\bf r}_2) \approx & C_0\exp[-\frac{ik_0({\bf r}_1^2-{\bf r}_2^2)}{2f}]\\
+&\times\exp[\frac{-k_0^2\sigma^2({\bf r}_1 + {\bf r}_2)^2}{16f^2}]\frac{J_1(k_c \Delta r/2)}{k_c\Delta r /2}.\nonumber
+\end{align}
+Here $C_0 =  k_0^2E_0^2D_L^2\sigma^2 / 8f^2$ is the peak correlation amplitude; $\Delta r = |{\bf r}_1-{\bf r}_2|$ is the relative position coordinate; and $J_1$ is a Bessel function of the first kind.  The ratio 
+\begin{align}
+k_c &= k_0\frac{D_L}{f}\label{kc}
+\end{align}
+is a cutoff above which the PSD of the intensity
+\begin{align}
+    \rho_f(k) = C_0^2 \frac{2}{\pi k_c^2}\left[ \cos^{-1}\left(\frac{k}{k_c}\right)
+     -\frac{k}{k_c}\sqrt{1-\frac{k^2}{k_c^2}}\right]\label{psd_image}
+\end{align}
+is strictly zero.  Equation~\eqref{psd_image} is valid near the optical axis where $|{\bf r}_1|,|{\bf r}_2| \ll w(z)$.
