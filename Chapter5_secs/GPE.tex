@@ -1,0 +1,74 @@
+\subsection{Gross-Pitaevskii equations}
+Here we numerically study the deceleration of an SOBEC initially moving in a speckle potential using the time-dependent Gross-Pitaevskii equation (GPE).
+The time-dependent GPE 
+\begin{align}\label{gpe}
+i\hbar\partial_t\Psi({\bf r},t) &= \left[-\frac{\hbar^2}{2m}\nabla^2 + V({\bf r}) + g_{\rm 3D}|\Psi({\bf r},t)|^2\right]\Psi({\bf r},t)
+\end{align}
+is a non-perturbative dynamical description ~\cite{erdHos2010derivation} of a large number of interacting identical bosons occupying the same spatial mode $\Psi({\bf r}, t)$, normalized to the total atom number, $N=\int d^4{\bf r} |\Psi({\bf r}, t)|^2$
+The interaction strength $g_{\rm 3D} = 4\pi\hbar^2a_s/m$ can be expressed in terms of the $s$-wave scattering length $a_s$.
+This GPE provides a good description of low-temperature spin-polarized BECs, with negligible thermal excitations~\cite{Dalfovo1999}. 
+
+Since our focus is on 1D transport, we must first obtain a 1D description of our 3D system~\cite{bao2003numerical}.
+Here we, we assume that the potential $V({\bf r}) = V(x) + V_\perp(y,z)$ can be separated into a weak longitudinal potential $V_\parallel(x)$ along with a strongly confining transverse potential $V_\perp(y,z)$.
+When the single-particle energy spacing from $V_\perp(y,z)$ greatly exceeds all other energy scales, the 3D wavefunction can be factorized into
+\begin{equation}
+    \Psi({\bf r},t) = \psi(x,t)\phi(y, z),
+\end{equation}
+containing a longitudinal term of interest giving the 1D density $n(x) = |\psi(x,t)|^2$, and a transverse term $\phi(y, z)$, normalized to unity, assumed to be the ground state of the transverse potential. 
+Inserting this ansatz into the GPE and integrating out the transverse degrees of freedom, gives the 1D GPE
+\begin{equation}
+    i\hbar\partial_t\psi = \left[-\frac{\hbar^2}{2m}\partial_x^2 + V(x) + g|\psi|^2\right]\psi,
+\end{equation}
+suitable for studying single-component 1D bosons in a speckle potential with 1D interaction strength 
+\begin{equation}
+    g = g_{\rm 3D}\int dy dz |\phi(y,z)|^4.
+\end{equation}
+For compactness of notation, here and below, we shall omit the functional dependance of $\psi$ on $x$ and $t$.
+
+
+The two component 1D spinor GPE describing SOBECs extends Eq.~\eqref{eq:soc} to include interactions, and consists of a pair of coupled non-linear differential equations
+\begin{align}
+i\hbar\partial_t\psi_\uparrow &= \left[\frac{\hbar^2}{2m}\left(-i\partial_x + \kr\right)^2 + \frac{\delta}{2} + V(x) + g_{\uparrow\uparrow} |\psi_\uparrow|^2 + g_{\uparrow\downarrow}|\psi_\downarrow|^2\right]\psi_\uparrow + \frac{\Or}{2}\psi_\downarrow \\
+i\hbar\partial_t\psi_\downarrow &= \left[\frac{\hbar^2}{2m}\left(-i\partial_x - \kr\right)^2 - \frac{\delta}{2} + V(x) + g_{\downarrow\downarrow} |\psi_\downarrow|^2 + g_{\uparrow\downarrow}|\psi_\uparrow|^2\right]\psi_\downarrow + \frac{\Or}{2}\psi_\uparrow
+\end{align}
+including the interaction strengths $g_{\uparrow\uparrow}$, $g_{\uparrow\downarrow}$, and $g_{\downarrow\downarrow}$.
+Here we focus on the specific case of $^{87}{\rm Rb}$ atoms~\cite{kawaguchi2012spinor} in the $f=1$ ground state manifold and have selected $\ket{\uparrow} = \ket{m_F=0}$ and $\ket{\downarrow} = \ket{m_F = -1}$. 
+The interactions can be parameterized in terms of an $s$-wave pseudo-potential $(g_{0, {\rm 3D}} + g_{2, {\rm 3D}}\Vec{F}_\alpha\cdot \Vec{F}_\beta) \delta({\bf r}_i - {\bf r}_j)$ now dependent on spin.
+In $^{87}{\rm Rb}$'s $f = 1$ manifold $g_{0, {\rm 3D}} = 100.86 \times 4\pi\hbar^2 a_{\rm B}/m$ is vastly larger than $g_{2, {\rm 3D}}\approx-4.7\times10^{-3} \times g_{0, {\rm 3D}}$, where $a_{\rm B}$ is the Bohr radius~\cite{vanKempen2002,Widera2006}.
+The interaction coefficients reduce to effective 1D interaction strengths just as in the single component case, and are related to the generic coefficients~\cite{Ho1998,Ohmi1998} via $g_{\uparrow\uparrow} = g_0$ and $g_{\downarrow\downarrow}  = g_{\uparrow\downarrow} = g_0 + g_2$.
+Table \ref{table:1} summarizes the parameters used in our simulations. 
+
+
+Our simulation results are divided into two sections: Sec.~\ref{single} hones our understanding by considering a single-component BEC evolving in a speckle potential, and then in Sec.~\ref{soc} we contrast to the case with SOC. 
+In both sections, we simulate initially trapped BECs accelerated to an initial momentum $k_0$ or quasi-momentum $q_0$ and we study their deceleration. 
+All the results are averaged over 20 speckle realizations, as in  Fig.~\ref{fig:Optical speckle}(b). 
+The average speckle potential $h\times 200\ {\rm Hz} \approx 0.05\Er$ was selected to be weak enough to cause no trapping effect yet strong enough to produce significant deceleration within $15 {\rm ms}$.
+
+\begin{table}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{l c c}
+\hline\hline
+Description & Symbol & Value \\
+\hline
+%interaction coefficient & $g_{0, {\rm 3D}}$ & $8.7\times10^{-52}$~${\rm J} \cdot {\rm m}$\\
+%interaction coefficient & $g_{2, {\rm 3D}}$ & $-4.0\times10^{-54}$~${\rm J} \cdot {\rm m}$\\
+$^{87}{\rm Rb}$ atomic mass & $m$ & $1.42\times10^{-25}~{\rm kg}$\\
+Raman laser wavelength & $\lambdar$ & $790~{\rm nm}$ \\
+Recoil energy & $\Er$ & $h\times 3.678\ {\rm kHz}$\\
+Dipole trap frequency & $\omega/2\pi$ & $10~{\rm Hz}$  \\
+Angle of Raman beams & $\theta_{\rm R}$& $180^{\circ}$ \\
+Speckle potential cut off &  $k_c$ & $6\kr$\\
+Average speckle potential & $\overline{V(x)}$ & $0.05\Er$\\
+Grid spacing  & $\delta x$ & $66\ {\rm nm}$\\
+Grids points (single-component)& $N_x$ & $2^{14} + 1$\\
+Grids points (SOC)& $N_x$ & $2^{13} + 1$\\
+Atom number & $N$ & $2\times 10^5$ \\
+Chemical potential & $\mu$ & $h\times 300\ {\rm Hz}$ \\
+% 300Hz, TF radius 34um.
+\hline\hline
+\end{tabular}
+\normalsize
+\caption{Simulation parameters}
+\label{table:1}
+\end{table}
+

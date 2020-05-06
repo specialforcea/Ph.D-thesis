@@ -1,0 +1,31 @@
+\subsection{Spinless atoms}
+
+For spinless free particles, the unperturbed Hamiltonian $H = \hbar^2 k^2 / 2m$ implies that we will study scattering between initial and final momentum states, labeled by  $\ket{k_0}$ and $\ket{k_f}$ respectively.  Figure~\ref{fig:Dispersion relations}(b) depicts examples by open circles, with arrows connecting initial states to final states.
+
+The time evolution of the initial state $\ket{\psi(0)} = \ket{k_0}$ subject to the speckle potential $V(x)$ may always be expressed as
+\begin{align} 
+\ket{\psi(t)} &= \sum_{k}C_{k,k_0} (t) e^{-i\omega_k t}\ket{k}, \label{expand}
+\end{align}
+with $C_{k,k_0}(0) = \delta_{k,k_0}$ and $\hbar\omega_k = \hbar^2 k^2 / 2 m$.  The coefficients $C_{k,k_0} (t)$ are governed by the time-dependent Schr\"{o}dinger equation giving the exact expression
+\begin{align}
+    C_{k_f,k_0}(t) = &  C_{k_f,k_0}(0) + \label{allorder} \\
+    & \frac{1}{i\hbar}\sum_k \bra{k_f}\hat V\ket{k} \int_0^t d\tau e^{i\omega_{k_f,k}\tau}C_{k,k_0}(\tau).\nonumber
+\end{align}
+with 
+\begin{align}
+    \omega_{k,l} &= \omega_k-\omega_l, &{\rm and} && \hat V &= \sum_x V(x) \ket{x}\bra{x}.
+\end{align}
+An order-by-order perturbation theory is typically obtained by recursively inserting the integral expression for $C_{k_f,k_0}(t)$ back into the integrand; unfortunately, the general problem is intractable and we truncate the perturbation series at first order. This term is effectivly obtained by replacing $C_{k_f,k_0}(\tau)$ with $C_{k_f,k_0}(0) = \delta_{k_f,k_0}$, and find
+\begin{equation}\label{firstC}
+    C_{k_f,k_0} (t) = \delta_{k_f,k_0} + \frac{1}{i\hbar}\int_0^t d\tau\bra{k_f}\hat V\ket{k_0} e^{i\omega_{k_f,k_0}\tau}.
+\end{equation}
+Unfortunately we do not know $V(x)$ for any specific realization of the speckle potential.
+
+In Chpt.~\ref{speckle_chapter} we characterized optical speckle in terms of second-order statistical metrics such as the PSD, here equal to $\rho(k_f-k_0) = \langle\bra{k_f}\hat V\ket{k_0}\bra{k_0}\hat V\ket{k_f}\rangle$, where the double-brackets indicate the ensemble average. The resulting ensemble averaged transition probability
+\begin{equation}
+ P_{f,0} (t) = \frac{\rho(k_f- k_0)}{\hbar^2}\left[\frac{2}{\omega_{f,0}} \sin\left(\frac{\omega_{f,0}t}{2}\right)\right]^2
+\end{equation}
+is a sharply peaked function centered at $\omega_{f,0} = 0$ with width $2\pi/t$, showing that a narrow range of energy matching states can be populated.  For long times, $\omega_{f,0}t \gg 1$ the quantity in square brackets converges to a scaled Dirac delta function $t\times\delta(\omega_{f,0})$.
+
+Figure~\ref{fig:Dispersion relations}(a) displays the normalized PSD for a speckle potential computed with $k_c = 6 \kr$, reminding us that $\rho(k) = 0$ for $k\geq k_c$.  Our FGR expression allows two types of scattering processes for the free particle dispersion shown in Fig.~\ref{fig:Dispersion relations}(b).  In the first process, depicted by the black arrow, the atom's initial momentum is reversed, changed by $\Delta k = 2 k_0$; as indicated by the dashed line, this process is second-order forbidden for $k_0 \geq k_c/2$.  In the second process (not pictured), the atom's momentum is only infinitesimally changed: spreading the wave-packet, but leaving the average momentum unchanged.
+This picture shows that back-scattering is essential for momentum-relaxation.

@@ -1,0 +1,44 @@
+\subsection{SOBECs}\label{soc}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics{Chapter5_secs/Fig6_SOC_Localization.pdf}
+    \caption{Motion in the presence of speckle and SOC.
+    The left column was computed without interactions and the right column added interactions. 
+    (a) and (b) Density distributions colored by their magnetization according to the color bar in Fig.~\ref{fig:Dispersion relations}.
+    The shaded curve depicts the initial density distribution, while the remaining red and and black curves were computed for  $q_0=2.0k_{\rm R}$ (in the SOC gap) and $q_0=1.2k_{\rm R}$ (below the SOC gap), respectively.
+    (c) and (d) Ensemble averaged final group velocity plotted as a function of initial group velocity for coupling strengths  from $0.5E_{\rm R}$ to $7.5E_{\rm R}$, spaced by $1.0E_{\rm R}$.
+    The results in (c) and (d) were averaged over 20 random speckle realizations. 
+       }
+    \label{fig:SOC}
+\end{figure}
+
+As in the single-component case, simulations with SOC begin with three steps aligned with experiment, however, the process of preparing the initial quasimomentum state $\ket{q_0,-}$ is considerably more elaborate than preparing a momentum state $\ket{k_0}$ in a single component system.
+(1) As before, we initialize a ground state BEC in a harmonic trap using imaginary time evolution, spin polarized in state $\ket{k_0 = 0, \downarrow}$.
+(2) We then use a combination of adiabatic and unitary evolution (described below) to transform this state into $\ket{q_0,-}$ for $\delta=0$ and $\Or$ ranging from $0.5\Er$ to $8\Er$.
+(3) Lastly, we again remove the harmonic potential and again follow the time evolution with a speckle potential ($k_c/\kr = 6$) for $16\ {\rm ms}$.
+
+Our procedure (2) begins with the observation that in a frame moving with velocity $\hbar \delta k / m$, the detuning $\delta$ present SOC Hamiltonian in Eq.~\eqref{eq:soc} is Dopper-shifted~\cite{Cheuk2012, Valdes-Curiel2017} to $\delta + 2\hbar^2 \delta k \kr/m$.
+Our first task is to adiabatically transform the initial state $\ket{k_0 = 0\downarrow}$ into $\ket{q_{\rm min}, -}$, a ground state SOBEC with quasi-momentum centered at $q=q_{\rm min}$, the global minima of the SOC dispersion, but with $\delta = 2\hbar^2 (q_0 - q_{\rm min}) \kr/m$.
+We achieve this by ramping up the Raman coupling strength from zero to $\Or$ on a time scale slow compared to $\hbar/\Delta(q_0,0)$.
+In the slow ramp up process, the harmonic trap provides the restoring force required to keep the state at a local minima of the dispersion~\cite{lin2011spin}, i.e., with zero group velocity. 
+Lastly, we diabatically set $\delta=0$ and apply momentum kick $\exp[i(q_0-q_m)x]$, giving the desired state $\ket{q_0, -}$. 
+
+Figures~\ref{fig:SOC}(a) and (b) show representative density distributions $n(x) = |\psi_\uparrow(x,t)|^2 +|\psi_\downarrow(x,t)|^2$ before and after a $16\ {\rm ms}$ time evolution with $\Or = 2\Er$, both (a) with no interactions and (b) with interactions.
+In both cases the pink shaded curve depicts the initial density distribution, while the density distributions for initial quasimomemta of $q_0 = 1.2 \kr$ and $2.0\kr$ are shown by the black and red curves respectively.
+In both cases the momentum exchange for back-scattering is below $k_c$, however, as with the FGR results, this direct simulations shows that the initial state prepared with energy within the SOC energy gap experiences negligible change in velocity, independent of the presence of interactions.
+
+While the free particle group velocity is simply related to wave-vector by $v = \hbar k / m$, atoms evolving according to the SOC dispersions, as in Fig.~\ref{fig:scatteringRate}, have group velocity given by the more complex relation
+\begin{align}
+\frac{v_\pm}{\vr} &= \frac{q}{\kr} \left\{1 \pm \left[\left(\frac{q}{\kr}\right)^2 + \left(\frac{\Or}{4 \Er},\right)^2\right]^{-1/2}\right\},
+\end{align}
+for atoms in state $\ket{q, \pm}$, expressed in units of the recoil velocity $\vr = \hbar \kr/m$.
+Because we are interested in transport phenomena, it is this group velocity not the quasimomentum, that is the quantity of primary interest.
+
+Figures~\ref{fig:SOC}(c) and (d) plot the final group velocity $v_f$ as a function of initial group velocity $v_0$ after a $16\ {\rm ms}$ period of free evolution, both (c) with no interactions and (d) with interactions, and with $\Or$ from $0.5\Er$ to $7.5\Er$.
+As compared to the simulations without SOC in Fig.~\ref{fig:SOC}(c), these curves show a near-complete suppression of relaxation for velocities near $v_0 \approx \vr$, in the SOC energy gap, and with an increasing window of suppression with increasing $\Or$.
+
+Lastly, we see that interaction effects do play a role, leading to more rapid deceleration.
+The origin of this effect can be understood by comparing the red curves in Figs.~\ref{fig:SOC}(a) and (b): adding interactions leads a mean-field driven expansion of the BEC, increasing the range of velocities present.
+As a result, when the SOC energy gap is small (small $\Or$), a significant fraction of the BEC's velocity distribution falls outside the SOC energy gap, thereby sampling points in the dispersion where first-order backscattering is allowed.
+At larger $\Or$, motion is near-ballistic near the center of the SOC gap, but the transition from ballistic to decelerated is smoothed as compared to the case with no interactions.

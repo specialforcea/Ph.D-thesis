@@ -1,0 +1,14 @@
+\section{Scattering of an SOBEC from a speckle potential} \label{Model}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{Chapter5_secs/Fig3_Dispersions.pdf}
+    \caption{Fermi's Golden Rule. Momentum are expressed in units of the single-photon recoil momentum $\kr$ used to create SOC in (c). (a) Representative PSD for optical speckle with $k_c = 6 \kr$. (b) Free particle dispersion relation. The dashed arrow marks the boundary above which the FGR rate vanishes, while the solid arrow provide an example with non-zero rate. (c) SOC dispersion relations computed for $\delta = 0$ add $\Or = 1\Er$ colored according to the expectation value $\langle\sigma_z(q)\rangle$, with arrows marked as in (b).  Note the transition through the gap in the dispersion relation at $E\approx \Er$ where the FGR rate is nearly zero.}
+    \label{fig:Dispersion relations}
+\end{figure}
+
+We now focus on the motion of spin-orbit coupled bosons in a speckle-induced disorder potential.  In this section, we develop a Fermi's golden rule (FGR) approach for scattering from a disorder potential, both with and without SOC, schematically depicted in Fig.~\ref{fig:Dispersion relations}.   The first order scattering processes captured by the FGR are possible when a matrix element (here from the disorder potential) can couple energetically degenerate initial and final states (here momentum or quasi-momentum states).  We will see that the strength of this coupling is proportional to the PSD of the speckle potential, an example of which is shown in Fig.~\ref{fig:Dispersion relations}(a).  As depicted in  Fig.~\ref{fig:Dispersion relations}(b), this implies an absence of scattering for momenta differences larger than the speckle-cutoff $k_c$.  Adding SOC, as in Fig.~\ref{fig:Dispersion relations}(c), can suppress scattering for additional wavevectors.  Because a spin-independent speckle potential has no spin-changing matrix element, the energetically allowed transition at an energy $E/\Er \approx 1$ between states of opposite spin is strongly suppressed.  The following discussion quantifies these observations.
+
+\input{Chapter5_secs/spinlessSC}
+\input{Chapter5_secs/SOCSC}
+\input{Chapter5_secs/ComputedSC}
