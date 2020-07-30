@@ -1,1 +1,44 @@
 \subsection{Characterization of speckle beams}
+In Chapter~(\ref{speckle_chapter}), we derived a Gaussian beam model of the speckle beam and calculated the field-field correlation function, PSD and intensity distribution. In experiment, the PSD and average intensity can be measured with cold atoms.
+
+In \cite{huckans2009quantum}, the evolution of momentum state under optical lattice pulsing is studied. The highest order of momentum state occupied in the evolution can be used to calculate the lattice depth. And in short time, the state is transferred from the initial zero momentum state to the $\pm 1$ order momentum states. The $\pm 1$ order momentum states correspond to the nonzero component in the PSD of the lattice potential. The lattice pulsing experiment inspired us to measure the average intensity and the cutoff $k_c$ of the PSD using speckle beam pulsing.  In analogy with the lattice pulsing, here in the speckle beam pulsing, the speckle potential contains all the continuous frequency modes. Starting from state $\ket{k=0}$, momentum states quickly dephase and reach a stationary distribution. By Virial theorem, the squared width of this distribution is proportional to the average speckle potential.
+
+To measure the PSD and the cutoff $k_c$ of speckle potential with short time speckle pulsing, we derive the evolution of the momentum state under two approximations. The first is the Raman-Nath approximation, atoms don’t move far during the pulse.  The second is that the evolution time is short compared to $\hbar/V(x)$, so atoms don’t acquire a phase comparable to $2\pi$.
+Consider Hamiltonian
+\begin{equation}
+    \hat{H} = \frac{\hbar^2k^2}{2m} + V(x).
+\end{equation}
+The time evolution operator is
+\begin{equation}
+    \hat{U}(t) = \exp{-i\frac{\Delta t}{\hbar}\left[\frac{\hbar^2k^2}{2m}+V(x)\right]},
+\end{equation}
+Define $E_c$ as the energy associated with $k_c$, $\tau = \frac{\Delta t}{\hbar}E_c$, $\hat{k} = \frac{k}{k_c}$ and $S(x) = \frac{V(x)}{E_c}$
+\begin{equation}
+    \hat{U}(t) = \exp{-i\tau\left[\hat{k}^2+S(x)\right]}.
+\end{equation}
+Expand the operator to second order, 
+\begin{equation}
+    \hat{U}(t) = \exp{-i\tau\hat{k}^2/2}\exp{-i\tau S(x)}\exp{-i\tau\hat{k}^2/2}.
+\end{equation}
+We assume the initial state is $\ket{k=0}$ so the third term does not contribute, and we measure the distribution is $k$ space, so we can ignore the first term. The second term governs the short time evolution. To lowest order, 
+\begin{equation}
+    \hat{U}(t)\ket{k=0} = \ket{k=0} - i\tau S(x) \ket{k=0}
+\end{equation}
+Expand $S(x)$ in $k$ space,
+\begin{equation}
+    S(x) = \sum_{k,k'}\Tilde{S}(k-k')\dyad{k}{k'}
+\end{equation}
+So
+\begin{equation}
+    \hat{U}(t)\ket{k=0} = \ket{k=0} - i\tau \sum_{\delta k}\Tilde{S}(\delta k)\ket{\delta k}
+\end{equation}
+The state probability distribution at time $\tau$ is
+\begin{equation}
+    P(k,\tau) = \tau^2 |\Tilde{S}(\delta k)|^2 + \delta_{k,0}
+\end{equation}
+proportional to the PSD $|\Tilde{S}(\delta k)|^2$.
+
+In the experiment, we put a iris right before the diffuser $D$ in \ref{fig:design}. Bu opening and closing the iris, we can control the size of the beam which determines $k_c$ of the speckle potential PSD in the focal plane. As the model we derived in \ref{speckle_chapter} shows, the speckle beam size at the focal plane does not change when the beam size at the diffuser changes. The beam size at the focal plane is determined by the field-field correlation length at the the diffuser. So the average speckle potential depth is proportional to the power of the beam which we can measure with a photodiode(PD). 
+
+Our experimental sequence start with a BEC held in a cross dipole trap. Immediately after turning off the dipole trap, we pulse the speckle beam for time $\tau$, followed by a time-of-flight (TOF). An absorption image is taken after the TOF. For the data we took, $\tau$ range from $0 {\rm ms}$ to $6 {\rm ms}$. The TOF maps the momentum distribution to the position distribution. So by analysing the optical depth of the images, we can get the momentum distribution of atoms after the speckle pulsing and compute its width from which, the average kinetic energy and average speckle potential depth can be estimated.
+
