@@ -6,7 +6,7 @@
     \caption{A two level system with energy difference $\omega$ in a light field with frequency $\nu$. $\delta = \nu - \omega$ is the detuning. }
     \label{fig:twolevel}
 \end{figure}
-A two level system shown in Fig.~(\ref{fig:twolevel}) interacts with light field via electric dipole interaction. 
+A two-level system shown in Fig.~(\ref{fig:twolevel}) interacts with the light field via electric dipole interaction. 
 \begin{equation}
     \hat{H} = -\Vec{d}\cdot \Vec{E}
 \end{equation}
@@ -52,9 +52,9 @@ Here,
 \begin{equation}
     \Omega = \frac{\Vec{E}_0 \cdot \Vec{\mu}}{\hbar}.
 \end{equation}
-The frame transformation and the removal of the oscillating term is named after rotating wave approximation (RWA), it is widely used in atomic physics when atoms interact with near resonance high frequency optical field, and satisfying the condition $\delta \ll \nu, \omega$.
+The frame transformation and the removal of the oscillating term are named after rotating wave approximation (RWA), it is widely used in atomic physics when atoms interact with near resonance optical field, and satisfying the condition $\delta \ll \nu, \omega$.
 
-The Hamiltonian above describes a closed system, where the two level atom only interacts with the one single optical mode and the evolution of atomic states and photon states is coherent. In reality, the atom interacts not only with the optical field but also the vacuum modes in the environment. The vacuum modes are contiguous in free space and discrete in a cavity, the coupling between the atomic states to the vacuum modes leads to spontaneous emission of the excited state and causes incoherence. Wigner-Weisskopf theory \cite{scully1999quantum} represents the vacuum modes with quantized field operators and calculates spontaneous emission with Fermi's golden rule. The Hamiltonian of atomic system and vacuum modes is
+The Hamiltonian above describes a closed system, where the two-level atom only interacts with the one single optical mode, and the evolution of atomic states and photon states is coherent. In reality, the atom interacts not only with the optical field but also with the vacuum modes in the environment. The vacuum modes are contiguous in free space and discrete in a cavity, the coupling between the atomic states to the vacuum modes leads to spontaneous emission of the excited state and causes incoherence. Wigner-Weisskopf theory \cite{scully1999quantum} represents the vacuum modes with quantized field operators and calculates spontaneous emission with Fermi's golden rule. The Hamiltonian of the atomic system and vacuum modes is
 \begin{equation}
     \hat{H} = \hbar \omega \dyad{2}{2} + \sum_j\hbar \nu (\hat{a}^\dag_j\hat{a}_j + \frac{1}{2}) - \sum_j(\hbar g_j \dyad{2}{1}\hat{a}_j + \hbar g_j^* \dyad{1}{2}\hat{a}^\dag_j),
 \end{equation}
@@ -68,7 +68,7 @@ is the result of spontaneous emission rate $\gamma$ and in free space
 \end{equation}
 which is also known as the Einstein A coefficient.
 
-One way to describe both coherent and incoherent evolution is using density operator. The density operator is defined as
+One way to describe both coherent and incoherent evolution is by using the density operator. The density operator is defined as
 \begin{equation}
     \hat{\rho} = \sum_\alpha p_\alpha \dyad{\phi_\alpha}{\phi_\alpha}.
 \end{equation}
@@ -97,7 +97,7 @@ The diagonal elements $\rho_{n,n}$ represents the the probability that the state
 \end{equation}
 the state represented by $\hat{\rho}$ is a pure state, otherwise, it is a mixed state. In quantum mechanics, the probability amplitude of states bear the full information, probability and coherence. The density operation representation loses the information of coherence of some states but the expectation value of coherence is preserved. 
 
-For an open system, the physical system we are interested in interacts with the environment, or sometimes called reservoir. The reservoir can contain a large number of degrees of freedom, for example, vacuum modes and other electromagnetic fields modes. The large number of degrees of freedom of the reservoir makes it hard to study its dynamics, however, in many cases, we are not actually interested in learning about the evolution of the reservoir. In these cases, it is useful to ignore the dynamics of the reservoir and only keep the effect the reservoir has on the system. By making this assumption, the coherent evolution of the system and the reservoir is lost and there exists decoherence in the dynamic of the system, so density operator is widely used to describe the open system.
+For an open system, the physical system we are interested in interacts with the environment or sometimes called a reservoir. The reservoir can contain a large number of degrees of freedom, for example, vacuum modes and other electromagnetic fields modes. The large number of degrees of freedom of the reservoir makes it hard to study its dynamics, however, in many cases, we are not actually interested in learning about the evolution of the reservoir. In these cases, it is useful to ignore the dynamics of the reservoir and only keep the effect the reservoir has on the system. By making this assumption, the coherent evolution of the system and the reservoir is lost and there exists decoherence in the dynamic of the system, so density operator is widely used to describe the open system.
 
 The full Hamiltonian is
 \begin{equation}
@@ -120,7 +120,7 @@ The function $f(t)$ characterizes the time evolution of the reservoir, and it is
     ACF_f(t-t') = \expval{(f(t)-\expval{f(t)})(f(t')-\expval{f(t')})}.
 \end{equation}
 The correlation time $t_c$ of the function $f(t)$ is defined as the width of the peak of $ACF_f(t-t')$. 
-The first assumption of reservoir is that $t_c \ll 1$, which means the reservoir has Markovian property, it quickly forgets about its previous state does not keep the memory of interacting with the system.
+The first assumption of the reservoir is that $t_c \ll 1$, which means the reservoir has Markovian property, it quickly forgets about its previous state does not keep the memory of interacting with the system.
 
 The second assumption is the reservoir is large enough that the system can hardly affect its state. Again, this means that the reservoir is stationary. Under these assumptions, the dynamics of the system is derived and expressed in terms of the reduced density operator
 \begin{equation}
