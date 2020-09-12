@@ -1,7 +1,7 @@
 \subsection{Bose-Einstein statistics and non-interacting BEC}
 Quantum statistics differs from classical statistics in two aspects, indistinguishability and exchange symmetry. 
 
-For a two-particle wave function $\ket{\phi_1\phi_2}$, if the two particles are fermions, they can not occupy the same state. $\ket{\phi_1\phi_2} = -\ket{\phi_2\phi_1}$, if $\phi_1 = \phi_2$, $\ket{\phi_1\phi_2} = 0$. For Bosons, this is not the case. Any number of Bosons can occupy the same state and the system has the lowest energy when all the Bosons are in the ground state.
+For a two-particle wave function $\psi(\mathbf{r}_1,\mathbf{r}_2)$, if the two particles are Fermions, they can not occupy the same state. $\psi(\mathbf{r}_1,\mathbf{r}_2) = -\psi(\mathbf{r}_2,\mathbf{r}_1)$, if $\psi(\mathbf{r}_1,\mathbf{r}_2) = \psi(\mathbf{r}_2,\mathbf{r}_1)$, $\psi(\mathbf{r}_1,\mathbf{r}_2) = 0$. For Bosons, this is not the case. Any number of Bosons can occupy the same state and the system has the lowest energy when all the Bosons are in the ground state.
 
 The Bose-Einstein distribution can be derived from the principle of maximum entropy. A Boson system with $N$ particles are distributed to states $\{\ket{\epsilon_i}\}$, each state $\ket{\epsilon_i}$ has degeneracy $g_i$ and it is occupied by $n_i$ particles. The number of micro-state is
 \begin{equation}
@@ -13,7 +13,7 @@ Maximizing $\Omega(\{n_i\})$ under the constraints $\sum_{i}n_i = N$ and $\sum_{
 \end{equation}
 $\alpha$ and $\beta$ are the Lagrange multipliers. From constraints $\sum_{i}n_i = N$ and $\sum_{i}n_i\epsilon_i = U$, it can be determined $\alpha$ is chemical potential $\mu$ over $k_BT$ and $\beta$ is $-1/k_BT$ where $k_B$ is Boltzmann constant and $T$ is temperature.
 
-To find out how does this distribution lead to Bose Einstein condensate, we need to revisit the constraints. For a system of particles in a box of volumn V. The energy density of states is
+To find out how does this distribution lead to Bose-Einstein condensates, we need to revisit the constraints. For a system of particles in a box of volume V. The energy density of states is
 \begin{equation}
     g(\epsilon) = \frac{V}{4\pi^2}\big(\frac{2m}{\hbar}\big)^{3/2}\sqrt{\epsilon}    
 \end{equation}
@@ -25,7 +25,7 @@ Denote the integral as $I(\mu)$
 \begin{equation}
     I(\mu) = \int_0^\infty\frac{\sqrt{\epsilon}}{\exp{(\epsilon-\mu)/k_BT}-1}d\epsilon
 \end{equation}
-For Eq.~(\ref{N}) to hold true, $I(\mu)$ should be a constant and $\mu$ should be a function of $T$. As $T$ decreases, $\mu$ should increase to keep $I(\mu)$ constant. But $\mu$ can not go positive because in that case, for states $\epsilon_i-\mu < 0$, $n_i$ will be negative. So as $T$ decreases to some critical temperature $T_c$, $\mu$ increases to 0 to keep $I(\mu)$ constant. As $T$ continue decreasing, $\mu$ can not increase any more and we have
+For Eq.~(\ref{N}) to hold, $I(\mu)$ should be a constant, and $\mu$ should be a function of $T$. As $T$ decreases, $\mu$ should increase to keep $I(\mu)$ constant. But $\mu$ can not go positive because in that case, for states $\epsilon_i-\mu < 0$, $n_i$ will be negative. So as $T$ decreases to some critical temperature $T_c$, $\mu$ increases to 0 to keep $I(\mu)$ constant. As $T$ continue decreasing, $\mu$ can not increase anymore and we have
 \begin{equation}
     \frac{V}{4\pi^2}\big(\frac{2m}{\hbar}\big)^{3/2}\int_0^\infty\frac{\sqrt{\epsilon}}{\exp{(\epsilon-\mu)/k_BT}-1}d\epsilon < N
 \end{equation}

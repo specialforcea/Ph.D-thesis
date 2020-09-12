@@ -1,9 +1,9 @@
 \subsection{GPE of scalar BEC}
-For a dilute and cold gas, it is proper to approximate the interaction with two body collisions. At low energy, the two body collision interaction can be represented by s-wave pseudo potential which is characterized by s-wave scattering length.
+For a dilute and cold gas, it is proper to approximate the interaction with two-body collisions. At low energy, the two body collision interaction can be represented by the s-wave pseudopotential which is characterized by s-wave scattering length.
 \begin{equation}
     \hat{V}_{int} = g\delta(\textbf{r}' - \textbf{r}''), 
 \end{equation}
-the constant g is a function of scattering length a,
+the constant $g$ is a function of scattering length $a$,
 \begin{equation}
     g = \frac{4\pi\hbar^2a}{m}.
 \end{equation}
@@ -11,7 +11,7 @@ the constant g is a function of scattering length a,
 The Hamiltonian of the cold gas system takes the form
 \begin{align}
     \hat{H} = &\int d\textbf{r} \hat{\Psi}^\dag(\textbf{r})\left[-\frac{\hbar^2}{2m}\grad^2 + \hat{V}(\textbf{r})\right]\hat{\Psi}(\textbf{r})\\ \nonumber
-    & + g\int d\textbf{r}\hat{\Psi}^\dag(\textbf{r})\hat{\Psi}^\dag(\textbf{r})\hat{\Psi}(\textbf{r})\hat{\Psi}(\textbf{r}),
+    & + \frac{g}{2}\int d\textbf{r}\hat{\Psi}^\dag(\textbf{r})\hat{\Psi}^\dag(\textbf{r})\hat{\Psi}(\textbf{r})\hat{\Psi}(\textbf{r}),
 \end{align}
 and the dynamics of the field operators obey Heisenberg equation
 \begin{align}
@@ -39,11 +39,11 @@ $\mu$ is chemical potential and is subject to the conservation of particle numbe
     \int d\textbf{r} |\psi(\textbf{r})|^2 = N
 \end{equation}
 
-At low temperature $T \ll T_c$, the chemical potential of the system is dominated by the interaction energy which is much larger than the kinetic energy, since the majority of atoms are in its ground state $\ket{k=0}$. By making the Thomas-fermi approximation, we can neglect the kinetic energy term and the ground state takes a simple form
+At low temperature, $T \ll T_c$, the chemical potential of the system is dominated by the interaction energy which is much larger than the kinetic energy, since the majority of atoms are in its ground state $\ket{k=0}$. By making the Thomas-Fermi approximation, we can neglect the kinetic energy term and the ground state takes a simple form
 \begin{equation}
      \psi(\textbf{r}) = \sqrt{\frac{\mu - V(\textbf{r})}{g}}
 \end{equation}
-This is the Thomas-Fermi wave function and given enternal potential $V(\textbf{r})$, chemical potential $\mu$ can be calculated under the constraint of atom number conservation. 
+This is the Thomas-Fermi wave function and given external potential $V(\textbf{r})$, chemical potential $\mu$ can be calculated under the constraint of atom number conservation. 
 
 
 
