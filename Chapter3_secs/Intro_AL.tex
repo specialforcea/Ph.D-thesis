@@ -14,15 +14,15 @@ The Hamiltonian is
 \begin{equation}
     \hat{H} = \sum_j E_j \hat{a}_j^\dag\hat{a}_j + \sum_{j<k}(V_{jk}\hat{a}_j^\dag\hat{a}_k + c.c)
 \end{equation}
-Here $E_j$ is the potential energy at site j, it is a random variable and has probability density distribution $E_j \sim P(E)dE$ which is characterized by a width $W$. $V_{jk}$ is the coupling of states on site j and site k, it can be random or nonrandom.
+Here $E_j$ is the potential energy at site $j$, it is a random variable and has probability density distribution $E_j \sim \mathbb{P}(E)dE$ which is characterized by a width $W$. $V_{jk}$ is the coupling of states on site $j$ and site $k$, it can be random or nonrandom.
 
-Under the following two conditions, it was proved the wave function will be localized in a small region without diffusion. Here localization means at $t=0$, starting at site j, $a_j(0) = 1$, and $a_j(\infty)$ remains finite.
+Under the following two conditions, it was proved the wave function will be localized in a small region without diffusion. Here localization means at $t=0$, starting at site $j$, $a_j(0) = 1$, and $a_j(\infty)$ remains finite.
 \begin{itemize}
     \item Low density of sites. The average coupling strength between states at different lattice sites $\langle V_{jk} \rangle < V_c$, $V_c$ is of the magnitude of $W$.
     \item $V(r)$ falls off faster than $\frac{1}{r^3}$ as $r \to \infty$.
 \end{itemize}
 
-Intuitively, the probability of diffusion from the initial site j depends on the number of energy matching sites k and the coupling strength between site j and sites k. Starting from the original state at site $j$, consider the sites $k$ within the sphere of radius $r$ originated from site $j$. As $r$ increases, the probability of finding more energy matching sites $k$ within the sphere of radius $r$ increases as $r^3$ in a 3-dimensional space. But if the coupling strength $V(r)$ decreases even faster, as $r \to \infty$, the probability the initial state diffuses to other sites remains small. So under the two conditions above, no diffusion happens and the initial state is localized.
+Intuitively, the probability of diffusion from the initial site $j$ depends on the number of energy matching sites $k$ and the coupling strength between site $j$ and sites $k$. Starting from the original state at site $j$, consider the sites $k$ within the sphere of radius $r$ originated from site $j$. As $r$ increases, the probability of finding more energy matching sites $k$ within the sphere of radius $r$ increases as $r^3$ in a 3-dimensional space. But if the coupling strength $V(r)$ decreases even faster, as $r \to \infty$, the probability the initial state diffuses to other sites remains small. So under the two conditions above, no diffusion happens and the initial state is localized.
 
 The following discussion in \cite{anderson1958absence} shows in theory how diffusion happens. Laplace transform $a_j(t)$, the probability amplitude at site $j$,
 \begin{equation}
@@ -41,7 +41,7 @@ the condition of localization can be studied. The following two infinite series 
     &f_0(s) - \frac{i}{is-E_0} + \sum_k \frac{1}{is-E_0}V_{0k}\left(\frac{V_{0k}}{is-E_k} + \sum_l\frac{1}{is-E_l}V_{kl}\frac{1}{is-E_k}V_{l0} + \cdots \right)f_0(s)\\\nonumber
     &f_j(s) = \frac{1}{is-E_j}V_{j0}f_0(s) + \sum_k\frac{i}{is-E_j}V_{jk}\frac{i}{is-E_k}f_0(s) + \cdots\\\nonumber
 \end{align}
-The infinite series describe the high-order scattering processes shown by a diagram in Fig.~1 of \cite{anderson1958absence}, diffusion happens if the initial state goes through different scattering paths that constructively interfere at other sites.  
+The infinite series describe the high-order scattering processes, diffusion happens if the initial state goes through different scattering paths that constructively interfere at other sites.  
 The term 
 \begin{equation}
     V_c(s) = \sum_k \frac{V_{0k}^2}{is-E_k} + \sum_{k,l}
@@ -49,7 +49,7 @@ The term
 \end{equation}
 describes the strength of diffusion through infinite orders of scattering. By considering only the direct connections between the initial site and the neighbors, the second order approximation is made. 
 \begin{equation}
-    f_0(s) = \frac{i}{is(1+K) + (i/\tau) - (E_0 - \Delta E^{(2)}}
+    f_0(s) = \frac{i}{is(1+K) + (i/\tau) - (E_0 - \Delta E^{(2)})}
 \end{equation}
 Here, 
 \begin{align}
