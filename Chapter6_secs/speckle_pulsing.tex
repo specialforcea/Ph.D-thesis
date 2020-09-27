@@ -1,31 +1,33 @@
 \section{Evolution of spinless BEC under speckle pulsing}\label{speckle_pulsing}
-In Chapter~(\ref{speckle_chapter}), we derived a Gaussian beam model of the speckle beam and calculated the field-field correlation function, PSD and intensity distribution. In experiment, the engineered speckle beam is focused at the atoms and it is hard to directly measure the average intensity of the speckle beam at the atoms. Direct measurement of the PSD and $k_c$ is even harder. In some experiments carried out in other labs previously, the researchers set up an identical beam at the test bench and measure the average intensity and PSD of the test speckle beam. The power and PSD of the speckle beam in the experiment is assumed to be the same, but no direct measurement was done to the best of our knowledge. Inspired by \cite{huckans2009quantum}, we designed and carried out an experiment that allowed us to measure the average intensity and PSD of the speckle beam using the evolution of spinless BEC under the speckle beam pulses.
+In Ch.~(\ref{speckle_chapter}), we derived a Gaussian beam model of the speckle beam and calculated the field-field correlation function, the PSD and the intensity distribution. In the experiments, the engineered speckle beam is focused at the atoms and it is hard to directly measure the average intensity of the speckle beam at the atoms. Direct measurements of the PSD and $k_c$ is even harder. In some experiments carried out previously that involved a speckle beam, the researchers set up an identical beam at the test bench and measure the average intensity and the PSD of the test speckle beam. The power and the PSD of the speckle beam in the experiments are assumed to be the same as those of the test beam, but no direct measurements were done to the best of our knowledge. Inspired by \cite{huckans2009quantum}, we designed and carried out an experiment that allowed us to measure the average intensity and the PSD of the speckle beam by using the evolution of spinless BECs under the speckle potentials.
 
 \begin{figure*}
     \centering
     \includegraphics{Chapter6_secs/speckle_pulsing_images.pdf}
-    \caption{Absorption images of atoms after TOF. The BECs are released from the dipole trap, immediately pulse the speckle potential for a various amount of time, followed by TOF. The absorption images are stacked up horizontally according to the speckle pulse duration.}
+    \caption{Absorption images of atoms after the evolution under speckle potentials and TOF. The BECs are released from the dipole trap, the pulses of the speckle potentials are turned on immediately for a various amount of time, followed by TOF. The absorption images are stacked up horizontally according to the speckle pulse duration.}
     \label{fig:speckle_pulsing_imgs}
 \end{figure*}
 
-In \cite{huckans2009quantum}, as shown in Fig.~(\ref{fig:lattice_pulsing}) the diffraction of a Bose-Einstein condensate from a one-dimensional optical lattice is studied. In very short time,
+In \cite{huckans2009quantum}, the diffraction of a Bose-Einstein condensate from a one-dimensional optical lattice is studied. In very short time,
 \begin{equation}
     T_{pulse} \ll t_{RN} = \frac{\hbar}{\sqrt{U_0E_L}} = \frac{T_{ho}}{\pi},
 \end{equation}
-the atoms are mainly in the $\ket{\pm k_L}$ momentum states. Since in the Raman-Nath approximation, the atoms move by a very small distance and acquires minimal kinetic energy, the kinetic energy term in the Hamiltonian is neglected. The momentum state transfers from $\ket{k=0}$ to $\ket{\pm k_L}$ which corresponds to the nonzero component in the PSD of the lattice potential. This inspires us to measure the PSD of the speckle potential and the cutoff $k_c$ using short term speckle beam pulses.
+the atoms are mainly scattered to the $\ket{\pm k_L}$ momentum states. Since in the Raman-Nath approximation, the atoms move by a very small distance and acquires minimal kinetic energy, the kinetic energy term in the Hamiltonian is neglected. The momentum states transfer from $\ket{k=0}$ to $\ket{\pm k_L}$, which correspond to the nonzero components in the PSD of the lattice potential. This inspires us to measure the PSD of the speckle potential and the cutoff $k_c$ by using the short-term speckle beam pulses.
 
-In Fig.~(\ref{fig:lattice_pulsing}), it shows that as the pulse duration increases beyond $t_{RN}$, the apparent edge of the momentum distribution is bounded by a maximum momentum $k_{max}$. The observed value of $k_{max}$ can be used to determine the lattice depth $U0$,
+As the pulse duration increases beyond $t_{RN}$, the apparent edge of the momentum distribution is bounded by a maximum momentum $k_{max}$. The observed value of $k_{max}$ can be used to determine the lattice depth $U_0$,
 \begin{equation}
     U_0 = \frac{\hbar^2k_{max}^2}{2M}
 \end{equation}
-Once the edge of the distribution reaches $k_{max}$, the distribution collapses to $\ket{k=0}$ at $T_{ho}/2$. The process approximately repeats it self every $T_{ho}/2$. The collapse and revival phenomena can be qualitatively explained in a classical picture. Atoms released from different positions in a harmonic trap become stationary every half period. The collapse and revival in Fig.~(\ref{fig:lattice_pulsing}) is not complete, at $T_{ho}/2$ there are always some higher momentum orders remain. The reason is the lattice potential is not perfectly harmonic. In contrast to the lattice pulsing, here in the speckle beam pulsing, the speckle potential contains all the continuous frequency modes. It is completely anharmonic and no collapse and revival should be expected. For long speckle pulsing time, the momentum states dephase and reach a stationary distribution. By Virial theorem, the kinetic energy of the atoms under this distribution is half the average speckle potential. This inspired us to measure the average speckle potential using the width of the momentum distribution for long speckle pulsing time.
+Once the edge of the distribution reaches $k_{max}$, the distribution collapses to $\ket{k=0}$ at $T_{ho}/2$. The process approximately repeats it self every $T_{ho}/2$. The collapse and revival phenomena can be qualitatively explained in a classical picture. The atoms released from different positions in a harmonic trap become stationary every half of the period. The collapse and revival is not complete in \cite{huckans2009quantum}, at $T_{ho}/2$ there are always some higher momentum orders remain. The reason is that the lattice potential is not perfectly harmonic. 
 
-\begin{figure*}
-    \centering
-    \includegraphics{Chapter6_secs/lattice_pulsing.pdf}
-    \caption{Fig.~1(a) of \cite{huckans2009quantum}. Concatenated absorption images of diffraction patterns, showing the evolving momentum distribution, compared with numerical GPE simulation results.}
-    \label{fig:lattice_pulsing}
-\end{figure*}
+In contrast to the lattice pulsing, in the speckle beam pulsing, the speckle potential contains continuous frequency modes. It is completely anharmonic and no collapse and revival should be expected. For long speckle pulsing time, the momentum states should reach a stationary distribution. By Virial theorem, the kinetic energy of the atoms under this stationary distribution should be half of the average speckle potential. This inspired us to measure the average speckle potential by using the width of the momentum distribution for long speckle pulsing time.
+
+% \begin{figure*}
+%     \centering
+%     \includegraphics{Chapter6_secs/lattice_pulsing.pdf}
+%     \caption{Fig.~1(a) of \cite{huckans2009quantum}. Concatenated absorption images of diffraction patterns, showing the evolving momentum distribution, compared with numerical GPE simulation results.}
+%     \label{fig:lattice_pulsing}
+% \end{figure*}
 
 \input{Chapter6_secs/short_term_pulse}
 \input{Chapter6_secs/Long_term_pulse}
