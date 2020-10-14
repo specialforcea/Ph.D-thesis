@@ -1,0 +1,67 @@
+\appendix
+\renewcommand{\thechapter}{C}
+\chapter{Derivation of the moments of random phase factors}
+\label{appendix:moments}
+
+In Sec.~\ref{prob sec}, we derive the joint probability density of random electric fields and the probability density of intensity \ref{P of int} by calculating the moments of the random electric fields. Under our assumptions in Sec.~\ref{prob sec}, the moments of the random electric fields are proportional the moments of the random phase factors $\phi({\bf r}')$.
+
+Under assumptions:
+
+\begin{align}\label{gaussian C_E}
+\langle \exp\left\{- i \left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\right\}\rangle &= \exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma^2}), 
+\end{align} 
+
+and
+
+\begin{equation}
+    \phi({\bf r}) \sim Uniform(0,2\pi).
+\end{equation}
+
+\begin{align}\label{gaussian C_E}
+\langle \exp\left\{- i \left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\right\}\rangle &= \langle \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right] - i\sin\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle \\\nonumber
+&=\langle \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle - i\langle\sin\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle\\\nonumber
+\end{align}
+
+By symmetry,
+\begin{equation}
+    \langle\sin\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle = \langle\sin\left[\phi({\bf r}_2)-\phi({\bf r}_1)\right]\rangle = 0,
+\end{equation}
+therefore,
+\begin{equation}
+    \langle \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle = \exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma^2}).
+\end{equation}
+
+\begin{align}
+    \langle \cos\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right]\rangle &=\langle \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2) + 2\phi({\bf r}_2)\right]\rangle\\\nonumber
+    &=  \langle \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\cos\left[2\phi({\bf r}_2)\right]\rangle\\\nonumber
+    & -\langle \sin\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\sin\left[2\phi({\bf r}_2)\right]\rangle\\\nonumber
+\end{align}
+$\phi({\bf r}_1)-\phi({\bf r}_2)$ is independent of $\phi({\bf r}_2)$, so
+\begin{equation}
+    \langle \cos\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right]\rangle = 0
+\end{equation}
+
+Similarly,
+\begin{equation}
+    \langle \sin\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right]\rangle = 0
+\end{equation}
+
+\begin{align}
+    \langle \cos\left[\phi({\bf r}_1)\right]\cos\left[\phi({\bf r}_2)\right]\rangle &=\frac{1}{2}\langle \cos\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right] + \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle\\\nonumber
+    & = \frac{1}{2}\exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma^2})\\\nonumber
+\end{align}
+
+\begin{align}
+    \langle \sin\left[\phi({\bf r}_1)\right]\sin\left[\phi({\bf r}_2)\right]\rangle &=\frac{1}{2}\langle \cos\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right] - \cos\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right]\rangle\\\nonumber
+    & = \frac{1}{2}\exp(-\frac{|{\bf r}_1-{\bf r}_2|^2}{\sigma^2})\\\nonumber
+\end{align}
+
+\begin{align}
+    \langle \sin\left[\phi({\bf r}_1)\right]\cos\left[\phi({\bf r}_2)\right]\rangle &=\frac{1}{2}\langle \sin\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right] - \sin\left[\phi({\bf r}_1)-\phi({\bf r}_2)\right]\rangle\\\nonumber
+    & = 0\\\nonumber
+\end{align}
+
+\begin{align}
+    \langle \cos\left[\phi({\bf r}_1)\right]\sin\left[\phi({\bf r}_2)\right]\rangle &=\frac{1}{2}\langle \sin\left[\phi({\bf r}_1)+\phi({\bf r}_2)\right] - \sin\left[\phi({\bf r}_2)-\phi({\bf r}_1)\right]\rangle\\\nonumber
+    & = 0\\\nonumber
+\end{align}
