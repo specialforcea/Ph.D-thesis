@@ -1,18 +1,18 @@
 \subsection{Spin-orbit coupled atoms}
 
-Our 1D SOC coupling~\cite{lin2011spin} is created by illuminating a two-level atom with a pair of counter-propagating lasers with wavelength $\lambdar$ tuned to drive stimulated Raman transitions between states $\{ \ket{q+\kr,\uparrow},\ket{q-\kr,\downarrow} \}$.  Here $\hbar\kr = 2\pi\hbar/\lambdar$ and $\Er = \hbar^2 \kr^2 / 2m$ are the single-photon Raman recoil momentum and energy respectively.
+Our 1D SOC~\cite{lin2011spin} is created by illuminating a two-level atom with a pair of counter-propagating lasers with wavelength $\lambdar$ tuned to drive stimulated Raman transitions between states $\{ \ket{q+\kr,\uparrow},\ket{q-\kr,\downarrow} \}$.  Here $\hbar\kr = 2\pi\hbar/\lambdar$ and $\Er = \hbar^2 \kr^2 / 2m$ are the single-photon Raman recoil momentum and energy respectively.
 Subject to this Raman coupling, the atoms obey the 1D Hamiltonian \begin{align}
 \hat{H}(q) = \left[\frac{\hbar^2 q^2}{2m} + \frac{\hbar^2 \kr^2}{2m}\right]\hat 1 + \left(\frac{\hbar^2 \kr q}{m} + \frac{\delta}{2}\right)\hat \sigma_z + \frac{\hbar\Or}{2}\hat \sigma_x,\label{eq:soc}
 \end{align}
 where $\left\{\hat 1, \hat\sigma_x,\hat\sigma_y,\hat\sigma_z\right\}$ are the identity and Pauli operators, respectively.
 Here $q$ is the quasi-momentum, $\Or$ is Raman coupling strength, and $\delta$ is the detuning from the two-photon Raman resonance condition.
-The resulting dispersion relations, plotted in Fig.~\ref{fig:Dispersion relations} for $\delta = 0$ and $\Or = \Er$, have energies $E^\pm(q)$  labeled by $q$ along with $\pm$ to indicate if they are in the upper or lower band.
+The resulting dispersion relations, plotted in Fig.~\ref{fig:Dispersion relations}(c) for $\delta = 0$ and $\Or = \Er$, have energies $E^\pm(q)$  labeled by $q$ along with $\pm$ to indicate if they are in the upper or lower band.
 
 These new energies and their associated amplitudes
 \begin{align*}
 \ket{q,\pm} &\propto a_\pm(q)\ket{q-\kr,\downarrow} + b_\pm(q)\ket{q+\kr,\uparrow}
 \end{align*}
-change the potential scattering processes, which we again compute using a FGR expression.  The coefficients
+change the potential scattering processes, which we again compute using an FGR expression.  The coefficients
 \begin{align*}
 a_\pm(q) & = \pm\frac{\Or}{2}& {\rm and} && b_\pm(q) &= \pm\frac{\Delta(q)}{2} + \frac{\sqrt{\Delta^2(q) + \Or^2}}{2}.
 \end{align*}
@@ -26,4 +26,4 @@ Following the same FGR argument presented above for initial states $\ket{q_0,-}$
 \begin{align}\label{transfer prob}
     P^\pm_{f, 0}(t) &= \frac{\rho(\Delta q)}{\hbar^2}\left|\frac{2\sin(\omega^\pm_{f, 0}t)}{\omega^\pm_{f, 0}}\!\matrixel{q_f,\pm}{e^{i\Delta q x}}{q_0,-}\right|^2
 \end{align}
-expressed in terms of the quasimomentum and energy differences $\hbar\Delta q = \hbar q_f-\hbar q_0$ and $\hbar \omega_{f,0}^\pm = E^\pm(q_f) - E^-(q_0)$.  For most initial states $\ket{q_0,-}$, such as two higher higher-energy states marked in Fig.~\ref{fig:Dispersion relations}(c), the scattering is essentially unchanged from our spinless example, with scattering occurring between energy-matched states with the same initial and final spin.  In contrast, for initial states residing in the SOC energy gap there is no energy-matched state of the same spin available for back-scattering; as indicated by the dashed line scattering is greatly suppressed.  We note that that backscattering is not completely blocked, because the energy matching states $\ket{\pm q_0,-}$ are not spin-eigenstates and do have some spin-overlap.
+expressed in terms of the quasimomentum and energy differences $\hbar\Delta q = \hbar q_f-\hbar q_0$ and $\hbar \omega_{f,0}^\pm = E^\pm(q_f) - E^-(q_0)$.  For most initial states $\ket{q_0,-}$, such as two higher-energy states marked in Fig.~\ref{fig:Dispersion relations}(c), the scattering is essentially unchanged from our spinless example, with scattering occurring between energy-matched states with the same initial and final spin.  In contrast, for initial states residing in the SOC energy gap there is no energy-matched state of the same spin available for backscattering; as indicated by the dashed line scattering is greatly suppressed.  We note that that backscattering is not completely blocked, because the energy matching states $\ket{\pm q_0,-}$ are not spin-eigenstates and do have some spin-overlap.

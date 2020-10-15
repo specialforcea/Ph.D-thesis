@@ -1,5 +1,5 @@
 \subsection{GPE of scalar BEC}
-For a dilute and cold gas, it is proper to approximate the interaction with two-body collisions. At low energy, the two body collision interaction can be represented by the s-wave pseudopotential which is characterized by s-wave scattering length.
+For dilute and cold gases, it is proper to approximate the interactions between atoms with two-body collisions. At low energy, the two-body collision interactions can be represented by the s-wave pseudopotential which is characterized by s-wave scattering length.
 \begin{equation}
     \hat{V}_{int} = g\delta(\textbf{r}' - \textbf{r}''), 
 \end{equation}
@@ -8,7 +8,7 @@ the constant $g$ is a function of scattering length $a$,
     g = \frac{4\pi\hbar^2a}{m}.
 \end{equation}
 
-The Hamiltonian of the cold gas system takes the form
+The Hamiltonian of the cold gases system takes the form
 \begin{align}
     \hat{H} = &\int d\textbf{r} \hat{\Psi}^\dag(\textbf{r})\left[-\frac{\hbar^2}{2m}\grad^2 + \hat{V}(\textbf{r})\right]\hat{\Psi}(\textbf{r})\\ \nonumber
     & + \frac{g}{2}\int d\textbf{r}\hat{\Psi}^\dag(\textbf{r})\hat{\Psi}^\dag(\textbf{r})\hat{\Psi}(\textbf{r})\hat{\Psi}(\textbf{r}),
@@ -19,31 +19,31 @@ and the dynamics of the field operators obey Heisenberg equation
     &=\left[-\frac{\hbar^2}{2m}\grad^2 + \hat{V}(\textbf{r}) + g\hat{\Psi}^\dag(\textbf{r},t)\hat{\Psi}(\textbf{r},t) \right] \hat{\Psi}(\textbf{r},t)
 \end{align}
 
-Bogoliubov formulated the mean-field approach \cite{Bogolyubov:1947zz} to solving the cold dilute gas system by expanding the field operators to the first order,
+Bogoliubov formulated the mean-field approach \cite{Bogolyubov:1947zz} to solving the cold dilute gases system by expanding the field operators to the first order,
 \begin{equation}
     \hat{\Psi}(\textbf{r},t) = \Psi(\textbf{r},t) + \delta \hat{\Psi}(\textbf{r},t)
 \end{equation}
-$\Psi(\textbf{r},t)$ is the mean-field, the expectation value of field operator $\hat{\Psi}(\textbf{r},t)$, $\Psi(\textbf{r},t) = \expval{\hat{\Psi}(\textbf{r},t)}$. And $\delta \hat{\Psi}(\textbf{r},t)$ is the excitation term which describes the vaiation of the field operator around its expectation value. $\Psi(\textbf{r},t)$ is a classical field and is often called the wave function of the condensate. When excitation is small and can be neglected, we arrive at the dynamics of the classical operator
+$\Psi(\textbf{r},t)$ is the mean-field, the expectation value of field operator $\hat{\Psi}(\textbf{r},t)$, $\Psi(\textbf{r},t) = \expval{\hat{\Psi}(\textbf{r},t)}$. And $\delta \hat{\Psi}(\textbf{r},t)$ is the excitation term which describes the variation of the field operator around its expectation value. $\Psi(\textbf{r},t)$ is a classical field and is often called the wave function of the condensate. When excitation is small and can be neglected, we arrive at the dynamics of the classical field
 \begin{equation}
     i\hbar\frac{\partial}{\partial t}\Psi(\textbf{r},t) =\left[-\frac{\hbar^2}{2m}\grad^2 + V(\textbf{r}) + g|\Psi(\textbf{r},t)|^2 \right]\Psi(\textbf{r},t)
 \end{equation}
 
-This equation is known as the Gross-Pitaevskii equation (GPE) which is derived by Gross \cite{gross1961structure} and Piteavskii \cite{pitaevskii1961vortex} independently.
+This equation is known as the Gross-Pitaevskii equation (GPE) which is derived by Gross \cite{gross1961structure} and Pitaevskii \cite{pitaevskii1961vortex} independently.
 
 To obtain the ground state of the condensate, we can write the function $\Psi(\textbf{r},t)$ as $\Psi(\textbf{r},t) = \psi(\textbf{r})e^{-i\mu t/\hbar}$. Then the GPE becomes
 \begin{equation}
     \mu \psi(\textbf{r}) =\left[-\frac{\hbar^2}{2m}\grad^2 + V(\textbf{r}) + g|\psi(\textbf{r})|^2 \right]\psi(\textbf{r})
 \end{equation}
-$\mu$ is chemical potential and is subject to the conservation of particle number
+$\mu$ is chemical potential and is subject to the conservation of particle numbers
 \begin{equation}
     \int d\textbf{r} |\psi(\textbf{r})|^2 = N
 \end{equation}
 
-At low temperature, $T \ll T_c$, the chemical potential of the system is dominated by the interaction energy which is much larger than the kinetic energy, since the majority of atoms are in its ground state $\ket{k=0}$. By making the Thomas-Fermi approximation, we can neglect the kinetic energy term and the ground state takes a simple form
+At low temperature, $T \ll T_c$, the chemical potential of the system is dominated by the interaction energy which is much larger than the kinetic energy, since the majority of atoms are in their ground states $\ket{k=0}$. By making the Thomas-Fermi approximation, we can neglect the kinetic energy term and the ground state takes a simple form
 \begin{equation}
      \psi(\textbf{r}) = \sqrt{\frac{\mu - V(\textbf{r})}{g}}
 \end{equation}
-This is the Thomas-Fermi wave function and given external potential $V(\textbf{r})$, chemical potential $\mu$ can be calculated under the constraint of atom number conservation. 
+This is the Thomas-Fermi wave function and given external potential $V(\textbf{r})$, chemical potential $\mu$ can be calculated under the constraint of atom-number conservation. 
 
 
 

@@ -1,9 +1,9 @@
 \subsection{GPE of spinor BEC}
-When we add the spin degree of freedom, we need to consider the spin-dependent potential and the spin-spin interaction in the two-particle scattering process. The two-body interaction takes the form
+When we add the spin degree of freedom, we need to consider the spin-dependent potentials and the spin-spin interactions in the two-particle scattering processes. The two-body interaction takes the form
 \begin{equation}
     \hat{V}_{int}(\textbf{r}_1,\textbf{r}_2) = (c_0 + c_2\Vec{F}_1\cdot\Vec{F}_2)\delta(\textbf{r}_1-\textbf{r}_2)
 \end{equation}
-The total angular momentum is conserved in the process of two spinor collisions and for two spin-1 particles, their total angular momentum $F$ can be 0 or 2, corresponding to scattering channel 0 and channel 2. The sign of coefficient $c_2$ determines whether the system is ferromagnetic (FM) or anti-ferromagnetic (AFM).  
+The total angular momentum is conserved in the processes of two spinor collisions. And for two spin-1 particles, their total angular momentum $F$ can be 0 or 2, corresponding to scattering channel 0 and channel 2. The sign of the coefficient $c_2$ determines whether the system is ferromagnetic (FM) or anti-ferromagnetic (AFM).  
 The s-wave pseudo-potential for both channels is  
 \begin{equation}
     V_{int}^F({\bf r},{\bf r}') = g_F\delta({\bf r},{\bf r}')
@@ -45,7 +45,7 @@ The Hamiltonian of the system is
 \end{equation}
 $\hat{U}_{m_1,m_2}(\textbf{r})$ can be any spin dependent potential. For example, Raman coupling is widely used in a BEC system as one way to realize the spin-orbit coupling. Intuitively, in a two-photon process, a particle in the spin state $\ket{m_F}$ absorbs a photon with momentum $k_{\rm R}$ and emits a photon with momentum $-k_{\rm R}$. The spin state jumps to $\ket{m_F + 1}$ and acquire momentum $2k_{\rm R}$. In the reverse process, it jumps from $\ket{m_F + 1}$ to $\ket{m_F}$ and acquire momentum $-2k_{\rm R}$. States $\ket{k + 2\kr,m_F+1}$ and $\ket{k - 2\kr,m_F}$ are coupled.
 
-From Heisenberg equation and mean field approximation, we can derive the spin-1 GPE
+From Heisenberg equation and the mean field approximation, we can derive the spin-1 GPE
 \begin{align} \label{spinor gpe}
     i\hbar\partial_t\psi_1 = & -\frac{\hbar^2}{2m}\nabla^2\psi_1  + \sum_{m_F}\hat{U}_{m_F,1}\psi_{m_F} + c_0n\psi_1\nonumber + c_2(n_1 + n_0 -n_{-1})\psi_1 + c_2\psi^\ast_{-1}\psi_0\psi_0\nonumber \\  
         i\hbar\partial_t\psi_0 = &-\frac{\hbar^2}{2m}\nabla^2\psi_0 + \sum_{m_F}\hat{U}_{m_F,0}\psi_{m_F} + c_0n\psi_0 + c_2(n_1 + n_{-1})\psi_0 +2c_2\psi^\ast_{0}\psi_1\psi_{-1}\nonumber\\

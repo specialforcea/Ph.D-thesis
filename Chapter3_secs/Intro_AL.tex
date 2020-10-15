@@ -14,7 +14,7 @@ The Hamiltonian is
 \begin{equation}
     \hat{H} = \sum_j E_j \hat{a}_j^\dag\hat{a}_j + \sum_{j<k}(V_{jk}\hat{a}_j^\dag\hat{a}_k + c.c)
 \end{equation}
-Here $E_j$ is the potential energy at site $j$, it is a random variable and has probability density distribution $E_j \sim \mathbb{P}(E)dE$ which is characterized by a width $W$. $V_{jk}$ is the coupling of states on site $j$ and site $k$, it can be random or nonrandom.
+Here $E_j$ is the potential energy at site $j$, it is a random variable and has probability density distribution $E_j \sim \mathbb{P}(E)dE$ which is characterized by a width $W$. $V_{jk}$ is the coupling of states on site $j$ and site $k$, it can be random or non-random.
 
 Under the following two conditions, it was proved the wave function will be localized in a small region without diffusion. Here localization means at $t=0$, starting at site $j$, $a_j(0) = 1$, and $a_j(\infty)$ remains finite.
 \begin{itemize}
@@ -22,7 +22,7 @@ Under the following two conditions, it was proved the wave function will be loca
     \item $V(r)$ falls off faster than $\frac{1}{r^3}$ as $r \to \infty$.
 \end{itemize}
 
-Intuitively, the probability of diffusion from the initial site $j$ depends on the number of energy matching sites $k$ and the coupling strength between site $j$ and sites $k$. Starting from the original state at site $j$, consider the sites $k$ within the sphere of radius $r$ originated from site $j$. As $r$ increases, the probability of finding more energy matching sites $k$ within the sphere of radius $r$ increases as $r^3$ in a 3-dimensional space. But if the coupling strength $V(r)$ decreases even faster, as $r \to \infty$, the probability the initial state diffuses to other sites remains small. So under the two conditions above, no diffusion happens and the initial state is localized.
+Intuitively, the probability of diffusion from the initial site $j$ depends on the number of energy matching sites $k$ and the coupling strength between site $j$ and sites $k$. Starting from the original state at site $j$, consider the sites $k$ within the sphere of radius $r$ originated from the site $j$. As $r$ increases, the probability of finding more energy matching sites $k$ within the sphere of radius $r$ increases as $r^3$ in a 3-dimensional space. But if the coupling strength $V(r)$ decreases even faster, as $r \to \infty$, the probability the initial state diffuses to other sites remains small. So under the two conditions above, no diffusion happens and the initial state is localized.
 
 The following discussion in \cite{anderson1958absence} shows in theory how diffusion happens. Laplace transform $a_j(t)$, the probability amplitude at site $j$,
 \begin{equation}
@@ -47,7 +47,7 @@ The term
     V_c(s) = \sum_k \frac{V_{0k}^2}{is-E_k} + \sum_{k,l}
     \frac{V_{0k}V_{kl}V_{l0}}{(is-E_k)(is-E_l)} + \cdots
 \end{equation}
-describes the strength of diffusion through infinite orders of scattering. By considering only the direct connections between the initial site and the neighbors, the second order approximation is made. 
+describes the strength of diffusion through infinite orders of scattering. By considering only the direct connections between the initial site and the neighbors, the second-order approximation is made. 
 \begin{equation}
     f_0(s) = \frac{i}{is(1+K) + (i/\tau) - (E_0 - \Delta E^{(2)})}
 \end{equation}
@@ -56,4 +56,4 @@ Here,
     &1/\tau = \sum_kV_{0k}^2\delta(E_k)\\\nonumber
     &K = \sum_{E_k\neq 0}\frac{V_{0k}^2}{E_k^{(2)}}
 \end{align}
-and $E^{(2)}$ is the second order energy perturbation. When $\tau$ is finite, meaning there are some energy matching sites coupled to the initial site, the amplitude $a_0(t)$ decays at $e^{-t/\tau}$, and the diffusion happens. Otherwise, when no energy matching states are coupled to the initial site, the amplitude does not decay, instead, it spread by the ratio $1/(1+K)$. No real transport happens in this case, the initial state is localized.
+and $E^{(2)}$ is the second-order energy perturbation. When $\tau$ is finite, meaning there are some energy matching sites coupled to the initial site, the amplitude $a_0(t)$ decays at $e^{-t/\tau}$, and the diffusion happens. Otherwise, when no energy matching states are coupled to the initial site, the amplitude does not decay, instead, it spread by the ratio $1/(1+K)$. No real transport happens in this case, the initial state is localized.
