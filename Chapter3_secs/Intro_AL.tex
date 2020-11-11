@@ -16,7 +16,7 @@ The Hamiltonian is
 \end{equation}
 Here $E_j$ is the potential energy at site $j$, it is a random variable and has probability density distribution $E_j \sim \mathbb{P}(E)dE$ which is characterized by a width $W$. $V_{jk}$ is the coupling of states on site $j$ and site $k$, it can be random or non-random.
 
-Under the following two conditions, it was proved the wave function will be localized in a small region without diffusion. Here localization means at $t=0$, starting at site $j$, $a_j(0) = 1$, and $a_j(\infty)$ remains finite.
+Under the following two conditions, it was proved in \cite{anderson1958absence} the wave function will be localized in a small region without diffusion. Here localization means at $t=0$, starting at site $j$, $a_j(0) = 1$, and $a_j(\infty)$ remains finite.
 \begin{itemize}
     \item Low density of sites. The average coupling strength between states at different lattice sites $\langle V_{jk} \rangle < V_c$, $V_c$ is of the magnitude of $W$.
     \item $V(r)$ falls off faster than $\frac{1}{r^3}$ as $r \to \infty$.
@@ -56,4 +56,4 @@ Here,
     &1/\tau = \sum_kV_{0k}^2\delta(E_k)\\\nonumber
     &K = \sum_{E_k\neq 0}\frac{V_{0k}^2}{E_k^{(2)}}
 \end{align}
-and $E^{(2)}$ is the second-order energy perturbation. When $\tau$ is finite, meaning there are some energy matching sites coupled to the initial site, the amplitude $a_0(t)$ decays at $e^{-t/\tau}$, and the diffusion happens. Otherwise, when no energy matching states are coupled to the initial site, the amplitude does not decay, instead, it spread by the ratio $1/(1+K)$. No real transport happens in this case, the initial state is localized.
+and $E^{(2)}$ is the second-order energy perturbation. When $\tau$ is finite, meaning there are some energy matching sites coupled to the initial site, the amplitude $a_0(t)$ decays at $e^{-t/\tau}$, and the diffusion happens. Otherwise, when no energy matching states are coupled to the initial site, the amplitude does not decay, instead, it spreads by the ratio $1/(1+K)$. No real transport happens in this case, the initial state is localized.
